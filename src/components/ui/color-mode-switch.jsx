@@ -2,33 +2,29 @@
 import { jsx } from "theme-ui"
 
 import { useColorMode } from "theme-ui"
-import Switch from "./switch"
+import { Switch } from 'theme-ui'
 import sun from "../../assets/sun.png"
 import moon from "../../assets/moon.png"
 
-const iconCss = { pointerEvents: `none`, margin: "4px" }
-
-const checkedIcon = (
-  <img
-    alt="moon indicating dark mode"
-    src={moon}
-    width="16"
-    height="16"
-    role="presentation"
-    sx={iconCss}
-  />
+const LabelTema = ({text, alt, iconSrc}) => (
+  <div
+  >
+    <img
+      alt={alt}
+      src={iconSrc}
+      width="16"
+      height="16"
+      role="presentation"
+      sx={{
+        mr: "0.5rem"
+      }}
+    />
+  <span sx={{color: "#fff"}}>{text}</span>
+</div>
 )
 
-const uncheckedIcon = (
-  <img
-    alt="sun indicating light mode"
-    src={sun}
-    width="16"
-    height="16"
-    role="presentation"
-    sx={iconCss}
-  />
-)
+const labelDark = <LabelTema text="Modo oscuro" alt="Luna" iconSrc={moon} />
+const labelLight = <LabelTema text="Modo claro" alt="Sol" iconSrc={sun} />
 
 const ColorModeSwitch = ({ afterToggle, ...props }) => {
   const [colorMode, setColorMode] = useColorMode()
@@ -40,16 +36,26 @@ const ColorModeSwitch = ({ afterToggle, ...props }) => {
     }, 400)
   }
 
+  const switchLabel = isDark ? labelDark : labelLight
+
   return (
+    <div
+    sx={{margin: "1rem 0.5rem"}}>
     <Switch
+      label={switchLabel}
       {...props}
-      aria-label="Toggle dark mode"
+      aria-label="Activar tema oscuro"
       aria-checked={isDark}
-      checkedIcon={checkedIcon}
-      uncheckedIcon={uncheckedIcon}
       checked={isDark}
       onChange={toggleColorMode}
+      sx={{
+        'input:checked ~ &': {
+          backgroundColor: "background"
+        }
+
+      }}
     />
+    </div>
   )
 }
 
