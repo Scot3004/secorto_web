@@ -31,6 +31,12 @@ yarn install
 yarn develop
 ```
 
+### Actualizar browser list
+
+```bash
+npx browserslist@latest --update-db
+```
+
 **Abre tu editor de código y empieza a programar!**
 
 El sitio web ahora está corriendo en la ruta `http://localhost:8000`!
