@@ -67,11 +67,6 @@ export const pageQuery = graphql`
         }
       }
     }
-    avatar: file(absolutePath: { regex: "/avatar.(jpeg|jpg|gif|png)/" }) {
-      childImageSharp {
-        gatsbyImageData(width: 64, height: 64)
-      }
-    }
   }
 `
 
