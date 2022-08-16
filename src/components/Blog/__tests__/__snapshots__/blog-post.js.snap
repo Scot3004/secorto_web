@@ -2,15 +2,19 @@
 
 exports[`BlogPost renders correctly 1`] = `
 .emotion-0 {
+  padding: 1rem;
+}
+
+.emotion-1 {
   color: primary;
   margin-bottom: 0;
 }
 
-.emotion-1 {
+.emotion-2 {
   margin-bottom: 16px;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
@@ -18,22 +22,24 @@ exports[`BlogPost renders correctly 1`] = `
   top: -2px;
 }
 
-<main>
+<div
+  className="emotion-0"
+>
   <img
     src="testImage"
   />
   <h1
-    className="emotion-0"
+    className="emotion-1"
   >
     blog-post
   </h1>
   <div
-    className="emotion-1"
+    className="emotion-2"
   >
     <small>
       <svg
         aria-hidden="true"
-        className="emotion-2 emotion-3"
+        className="emotion-3 emotion-4"
         fill="currentColor"
         focusable="false"
         height={16}
@@ -58,5 +64,5 @@ exports[`BlogPost renders correctly 1`] = `
     </small>
   </div>
   content
-</main>
+</div>
 `;
