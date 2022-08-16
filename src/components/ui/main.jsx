@@ -14,7 +14,7 @@ const Main = ({ children, sidebarOpen, header, footer }) => (
     {header}
     <Container>
       <SkipNavContent />
-        <div  sx={{p: 3, pb: "6rem"}}>
+        <div sx={{pb: "5.3rem"}}>
           {children}
         </div>
       </Container>

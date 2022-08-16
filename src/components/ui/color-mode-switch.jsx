@@ -5,8 +5,6 @@ import { useColorMode } from "theme-ui"
 import { Switch, Label } from 'theme-ui'
 import { LightMode, DarkMode } from "@emotion-icons/material-twotone"
 
-
-
 const ColorModeSwitch = ({ afterToggle, ...props }) => {
   const [colorMode, setColorMode] = useColorMode()
   const isDark = colorMode === `dark`

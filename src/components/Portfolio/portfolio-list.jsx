@@ -13,7 +13,7 @@ const PortfolioList = ({ posts }) => (
       gap: '3%',
       backgroundColor: "blogBg",
       p: '2rem 2rem 0',
-      borderRadius: "1rem",
+      mt: '5px',
       transition: "background-color 0.3s linear",
     }}
   >
