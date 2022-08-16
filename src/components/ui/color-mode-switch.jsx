@@ -2,33 +2,10 @@
 import { jsx } from "theme-ui"
 
 import { useColorMode } from "theme-ui"
-import Switch from "./switch"
-import sun from "../../assets/sun.png"
-import moon from "../../assets/moon.png"
+import { Switch, Label } from 'theme-ui'
+import { LightMode, DarkMode } from "@emotion-icons/material-twotone"
 
-const iconCss = { pointerEvents: `none`, margin: "4px" }
 
-const checkedIcon = (
-  <img
-    alt="moon indicating dark mode"
-    src={moon}
-    width="16"
-    height="16"
-    role="presentation"
-    sx={iconCss}
-  />
-)
-
-const uncheckedIcon = (
-  <img
-    alt="sun indicating light mode"
-    src={sun}
-    width="16"
-    height="16"
-    role="presentation"
-    sx={iconCss}
-  />
-)
 
 const ColorModeSwitch = ({ afterToggle, ...props }) => {
   const [colorMode, setColorMode] = useColorMode()
@@ -40,16 +17,50 @@ const ColorModeSwitch = ({ afterToggle, ...props }) => {
     }, 400)
   }
 
+  const IconWrapper = ({children}) => (
+    <div
+      sx={{
+        width:"100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        cursor: "pointer"
+      }}
+    >
+      {children}
+    </div>
+  )
+
   return (
+    <Label htmlFor="color-switch"
+    sx={{
+      margin: "1rem 0.5rem",
+      display: "flex",
+      alignItems: "center"
+    }}>
+      <IconWrapper>
+        <LightMode sx={{color: "#fff"}} size={24} />
+      </IconWrapper>
+
+
     <Switch
+      id="color-switch"
       {...props}
-      aria-label="Toggle dark mode"
+      aria-label="Activar tema oscuro"
       aria-checked={isDark}
-      checkedIcon={checkedIcon}
-      uncheckedIcon={uncheckedIcon}
       checked={isDark}
       onChange={toggleColorMode}
+      sx={{
+        'input:checked ~ &': {
+          backgroundColor: "background"
+        },
+        margin: "auto"
+      }}
     />
+      <IconWrapper>
+        <DarkMode sx={{color: "#fff"}} size={24} />
+      </IconWrapper>
+    </Label>
   )
 }
 

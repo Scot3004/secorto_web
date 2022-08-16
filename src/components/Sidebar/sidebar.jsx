@@ -41,9 +41,6 @@ const Menu = ({ open, setOpen }) => {
           Portafolio
         </Link>
         <ColorModeSwitch
-          sx={{
-            margin: "1rem auto",
-          }}
           afterToggle={setOpen}
         />
       </div>

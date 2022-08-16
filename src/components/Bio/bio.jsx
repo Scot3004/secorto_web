@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { Flex, Box, Link } from "theme-ui"
+import AvatarImg from "../../assets/avatar.jpg"
 
 const Bio = ({ author, avatar }) => {
   return (
@@ -13,16 +13,16 @@ const Bio = ({ author, avatar }) => {
         pt: 2,
       }}
     >
-      {avatar && (
-        <GatsbyImage
-          image={avatar?.childImageSharp.gatsbyImageData}
-          alt={author.name}
-          sx={{
-            mr: 2,
-            borderRadius: "50%",
-          }}
-        />
-      )}
+      <img
+        src={AvatarImg}
+        alt={author.name}
+        width={64}
+        height={64}
+        sx={{
+          mr: 2,
+          borderRadius: "50%",
+        }}
+      />
       <Box
         sx={{
           textAlign: 'center',
