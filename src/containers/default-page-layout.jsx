@@ -5,6 +5,7 @@ import Header from "../components/Header/header"
 import Footer from "../components/Footer/page-footer"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 import { useAvatar } from "../hooks/use-avatar"
+import ContentWrapper from "../components/ui/content-wrapper"
 
 const PageLayout = ({ location, children, metadata }) => {
   const avatar = useAvatar()
@@ -22,7 +23,9 @@ const PageLayout = ({ location, children, metadata }) => {
   return (
     <Layout location={location} header={pageHeader} footer={footer}>
       <Seo title={pageTitle} />
-      {children}
+      <ContentWrapper>
+        {children}
+      </ContentWrapper>
     </Layout>
   )
 }

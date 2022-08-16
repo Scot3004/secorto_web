@@ -12,8 +12,8 @@ const PostList = ({ posts }) => (
       justifyContent: "center",
       gap: "3%",
       backgroundColor: "blogBg",
-      pt: '2rem',
-      borderRadius: "1rem",
+      p: '1rem',
+      mt: "5px",
       transition: "background-color 0.3s linear",
     }}
   >
