@@ -36,6 +36,8 @@ const customStyles = {
     ":hover": {
       color: `hover`,
     },
+    overflowWrap: "break-word",
+    wordWrap: "break-word"
   },
   hr: {
     borderColor: `muted`,
