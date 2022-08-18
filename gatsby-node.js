@@ -2,8 +2,8 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 const path = require("path")
 
 const contentTemplate = {
-  blog: `./src/templates/blog-template.jsx`,
-  portafolio: `./src/templates/portafolio-template.jsx`,
+  blog: path.resolve(`./src/templates/blog-template.jsx`),
+  portafolio: path.resolve(`./src/templates/portafolio-template.jsx`),
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -36,7 +36,7 @@ const createPostTypePages = (result, actions, reporter, context) => {
   posts.forEach(({ node, previous, next }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve(contentTemplate[node.fields.contentType]),
+      component: contentTemplate[node.fields.contentType],
       context: {
         slug: node.fields.slug,
         id: node.id,
