@@ -1,5 +1,5 @@
 import React from "react"
-import { Themed } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import Helmet from "react-helmet"
 import { SkipNavLink } from "@reach/skip-nav"
 import VisuallyHidden from "@reach/visually-hidden"

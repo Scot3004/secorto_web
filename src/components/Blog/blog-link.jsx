@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { Themed, Card, Text, jsx } from "theme-ui"
+import { Card, Text, jsx } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import { Link } from "gatsby"
 import PostDate from "../Post/post-date"
 
