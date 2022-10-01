@@ -1,32 +1,27 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { GatsbyImage, getSrc, getImage } from "gatsby-plugin-image"
+import PhotoSwipeAdapter from './PhotoSwipeAdapter';
 
-const GalleryItems = ({ items }) => (
-  <div
-    sx={{
-      alignItems: "center",
-      display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "center",
-    }}
-  >
-    {items?.map(item => {
+const Gallery = ({ items, galleryId }) => (
+  <PhotoSwipeAdapter galleryId={galleryId} childElement='a'>
+    {items?.map((item, index) => {
       const image = getImage(item.image.thumbnail)
       return (
         <a
-          key={item.alt}
           href={getSrc(item.image.full)}
-          data-attribute="SRL"
+          target="_blank"
+          rel="noreferrer"
+          key={galleryId + '-' + index}
           sx={{
-            margin: "10px",
+            "m": "0.5rem"
           }}
         >
           <GatsbyImage image={image} alt={item.alt} />
         </a>
       )
     })}
-  </div>
+  </PhotoSwipeAdapter>
 )
 
-export default GalleryItems
+export default Gallery

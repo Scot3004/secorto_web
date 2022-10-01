@@ -1,5 +1,7 @@
 /** @jsx jsx */
-import { Themed, Container, jsx } from "theme-ui"
+import { Container, jsx } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
+
 import { Fragment } from "react"
 import Bio from "../Bio/bio"
 import BaseFooter from "./base-footer"
