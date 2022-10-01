@@ -4,8 +4,7 @@ import PostHero from "../Post/post-hero"
 import PostTitle from "../Post/post-title"
 
 import { PlaylistAddCheck, Person } from "@emotion-icons/material-twotone"
-import GalleryItems from "../Gallery/GalleryItems"
-import GalleryWrapper from "../Gallery/GalleryWrapper"
+import Gallery from "../Gallery/Gallery"
 import ContentWrapper from "../ui/content-wrapper"
 
 const PortfolioPost = ({
@@ -41,9 +40,7 @@ const PortfolioPost = ({
         {responsibilities}
       </p>
       {children}
-      <GalleryWrapper galleryId="galeria-portafolio">
-        <GalleryItems items={gallery} galleryId="galeria-portafolio" />
-      </GalleryWrapper>
+      <Gallery items={gallery} galleryId="galeria-portafolio" />
     </ContentWrapper>
   </main>
 )

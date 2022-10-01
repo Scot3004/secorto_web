@@ -3,14 +3,13 @@ import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
 import { Global } from '@emotion/react';
 
-
-const GalleryWrapper = ({ children, galleryId }) => {
-
+const PhotoSwipeAdapter = ({ children, galleryId, childElement, lightboxOptions }) => {
   useEffect(() => {
     let lightbox = new PhotoSwipeLightbox({
       gallery: '#' + galleryId,
-      children: 'a',
+      children: childElement,
       pswpModule: () => import('photoswipe'),
+      ...lightboxOptions
     });
     lightbox.init();
 
@@ -18,7 +17,7 @@ const GalleryWrapper = ({ children, galleryId }) => {
       lightbox.destroy();
       lightbox = null;
     };
-  }, [galleryId]);
+  }, [galleryId, childElement, lightboxOptions]);
 
   return (
     <div className="pswp-gallery" id={galleryId}>
@@ -32,4 +31,4 @@ const GalleryWrapper = ({ children, galleryId }) => {
   )
 }
 
-export default GalleryWrapper
+export default PhotoSwipeAdapter
