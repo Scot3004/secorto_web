@@ -19,26 +19,7 @@ exports[`PortfolioPost renders correctly 1`] = `
 }
 
 .emotion-6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-7 {
-  margin: 10px;
+  margin: 0.5rem;
 }
 
 <main>
@@ -126,31 +107,32 @@ exports[`PortfolioPost renders correctly 1`] = `
       my-responsibilities
     </p>
     content
-    <div>
-      <div
+    <div
+      className="pswp-gallery"
+      id="galeria-portafolio"
+    >
+      <a
         className="emotion-6"
+        href="testSrc"
+        rel="noreferrer"
+        target="_blank"
       >
-        <a
-          className="emotion-7"
-          data-attribute="SRL"
-          href="testSrc"
-        >
-          <img
-            alt="img1"
-            src="img1"
-          />
-        </a>
-        <a
-          className="emotion-7"
-          data-attribute="SRL"
-          href="testSrc"
-        >
-          <img
-            alt="img2"
-            src="img1"
-          />
-        </a>
-      </div>
+        <img
+          alt="img1"
+          src="img1"
+        />
+      </a>
+      <a
+        className="emotion-6"
+        href="testSrc"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="img2"
+          src="img1"
+        />
+      </a>
     </div>
   </div>
 </main>

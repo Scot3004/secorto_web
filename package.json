@@ -39,6 +39,7 @@
     "gatsby-remark-images": "^6.6.0",
     "gatsby-source-filesystem": "^4.24.0",
     "gatsby-transformer-sharp": "^4.24.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^28.1.3",
     "jest-emotion": "^11.0.0",
     "jest-environment-jsdom": "^28.1.3",
