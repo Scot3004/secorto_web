@@ -41,8 +41,8 @@ const PortfolioPost = ({
         {responsibilities}
       </p>
       {children}
-      <GalleryWrapper>
-        <GalleryItems items={gallery} />
+      <GalleryWrapper galleryId="galeria-portafolio">
+        <GalleryItems items={gallery} galleryId="galeria-portafolio" />
       </GalleryWrapper>
     </ContentWrapper>
   </main>

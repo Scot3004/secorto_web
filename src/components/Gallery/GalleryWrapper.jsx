@@ -1,18 +1,35 @@
-import React from "react"
-import { SRLWrapper } from "simple-react-lightbox"
+import React, { useEffect } from 'react';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
+import { Global } from '@emotion/react';
 
-const options = {
-  settings: {
-    autoplaySpeed: 1500,
-    transitionSpeed: 900,
-  },
-  thumbnail: {
-    thumbnailsGap: "20px",
-  },
+
+const GalleryWrapper = ({ children, galleryId }) => {
+
+  useEffect(() => {
+    let lightbox = new PhotoSwipeLightbox({
+      gallery: '#' + galleryId,
+      children: 'a',
+      pswpModule: () => import('photoswipe'),
+    });
+    lightbox.init();
+
+    return () => {
+      lightbox.destroy();
+      lightbox = null;
+    };
+  }, [galleryId]);
+
+  return (
+    <div className="pswp-gallery" id={galleryId}>
+      {children}
+      <Global styles={() => ({
+        '.pswp__img': {
+          objectFit: 'contain',
+        },
+      })}/>
+    </div>
+  )
 }
-
-const GalleryWrapper = ({ children }) => (
-  <SRLWrapper options={options}>{children}</SRLWrapper>
-)
 
 export default GalleryWrapper
