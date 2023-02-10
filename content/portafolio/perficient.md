@@ -20,4 +20,4 @@ Y aprendi la importancia que tiene desarrollar unas buenas pruebas en una aplica
 
 Si gustas obtener mas información puedes [visitar el sitio web de perficient](https://nearshore.perficient.com/)
 
-O bien puedes [aplicar para trabajar en perficient](ttps://nearshore.perficient.com/careers/)
+O bien puedes [aplicar para trabajar en perficient](https://nearshore.perficient.com/careers/)

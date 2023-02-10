@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { useId } from "react";
-const ResponsiveIFrame = ({children, ...props}) => {
+const ResponsiveIFrame = ({children, title, ...props}) => {
   const iframeId = useId()
   return (
   <div sx={{
@@ -12,6 +12,7 @@ const ResponsiveIFrame = ({children, ...props}) => {
   }}>
     <iframe
       id={iframeId}
+      title={title}
       {...props}
       sx={{
         position: "absolute",
