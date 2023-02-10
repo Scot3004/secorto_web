@@ -1,12 +1,12 @@
 /**
  * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
  *
- * See: https://www.gatsbyjs.com/docs/ssr-apis/
+ * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
  */
+import CustomLayout from "./wrapRootElement"
 
-// You can delete this file if you're not using it
-import React from "react"
-import { SidebarProvider } from "./src/context/SidebarContext"
-export const wrapRootElement = ({ element }) => (
-  <SidebarProvider>{element}</SidebarProvider>
-)
+export const wrapRootElement = CustomLayout
+
+export const onRenderBody = ({ setHtmlAttributes }) => {
+  setHtmlAttributes({ lang: `es` })
+}

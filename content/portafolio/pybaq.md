@@ -26,4 +26,4 @@ Hoy dia puedo celebrar que soy parte del equipo organizador labor con la que est
 
 Entre otras cosas he podido participar en un evento a nivel nacional llamado PyCon el cual es un evento realizado por la comunidad Python. En colombia se realiza una vez al año el segundo fin de semana de febrero, he tenido la oportunidad de apoyar en logística los años 2018, 2019 y 2020.
 
-Para mas información consulta <https://pybaq.co/>
+Para mas información consulta [el sitio web de pybaq](https://pybaq.co/)

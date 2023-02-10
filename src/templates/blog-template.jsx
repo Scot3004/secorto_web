@@ -5,7 +5,7 @@ import Layout from "../containers/layout"
 import Seo from "../containers/seo"
 import BlogPost from "../components/Blog/blog-post"
 import HeaderLink from "../components/Header/header-link"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXProvider } from "@mdx-js/react"
 import PostFooter from "../components/Footer/post-footer"
 
 const BlogLink = <HeaderLink to="/blog">Blog</HeaderLink>
@@ -13,18 +13,22 @@ const BlogLink = <HeaderLink to="/blog">Blog</HeaderLink>
 const BlogTemplate = ({
   data: { mdx, previous, next, site, avatar },
   location,
+  children
 }) => (
-  <Layout location={location} header={BlogLink} footer={<PostFooter author={site.siteMetadata.author} avatar={avatar} previous={previous} next={next} />}>
-    <Seo title={mdx.frontmatter.title} />
+  <Layout header={BlogLink} footer={<PostFooter author={site.siteMetadata.author} job={site.siteMetadata.job} avatar={avatar} previous={previous} next={next} />}>
     <BlogPost
       title={mdx.frontmatter.title}
       date={mdx.frontmatter.date}
       image={mdx.frontmatter.image}
     >
-      <MDXRenderer>{mdx.body}</MDXRenderer>
+      <MDXProvider>
+        {children}
+      </MDXProvider>
     </BlogPost>
   </Layout>
 )
+
+export const Head = () => <Seo title="Blog" />
 
 export const pageQuery = graphql`
   query BlogPostQuery($id: String, $previous: String, $next: String) {
@@ -61,10 +65,8 @@ export const pageQuery = graphql`
     }
     site {
       siteMetadata {
-        author {
-          name
-          job
-        }
+        author
+        job
       }
     }
   }

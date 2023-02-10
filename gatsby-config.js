@@ -1,12 +1,19 @@
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
+ */
+
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 module.exports = {
   siteMetadata: {
     title: `SeCOrTo`,
     description: `Sitio web de Sergio Orozco`,
     siteUrl: `https://www.secorto.com`,
-    author: {
-      name: "Sergio Carlos Orozco Torres",
-      job: "Software developer",
-    },
+    author: "Sergio Carlos Orozco Torres",
+    job: "Software developer",
     social: [
       {
         name: `Twitter`,
@@ -33,7 +40,6 @@ module.exports = {
     ],
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -90,6 +96,13 @@ module.exports = {
         path: `${__dirname}/content/portafolio`,
       },
     },
+        {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
@@ -97,9 +110,6 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-        defaultLayouts: {
-          default: require.resolve("./src/containers/default-page-layout.jsx"),
-        },
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
@@ -108,7 +118,7 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          { resolve: `gatsby-remark-copy-linked-files` },
+          //{ resolve: `gatsby-remark-copy-linked-files` },
         ],
       },
     },

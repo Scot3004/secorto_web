@@ -16,15 +16,19 @@ const PortfolioPosts = ({ data, location }) => (
   </Layout>
 )
 
+export const Head = () => <Seo title="Portafolio" />
+
 export const query = graphql`
   {
     allMdx(
       filter: { fields: { contentType: { eq: "portafolio" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
+      sort: { frontmatter: { title: ASC } }
     ) {
       edges {
         node {
-          slug
+          fields{
+            slug
+          }
           excerpt
           frontmatter {
             title

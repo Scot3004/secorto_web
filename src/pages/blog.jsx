@@ -16,15 +16,19 @@ const BlogPosts = ({ data, location }) => (
   </Layout>
 )
 
+export const Head = () => <Seo title="Blog" />
+
 export const query = graphql`
   {
     allMdx(
       filter: { fields: { contentType: { eq: "blog" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {
-          slug
+          fields{
+            slug
+          }
           excerpt
           frontmatter {
             title

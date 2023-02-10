@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXProvider } from "@mdx-js/react"
 import PortfolioPost from "../components/Portfolio/portfolio-post"
 import Seo from "../containers/seo"
 import Layout from "../containers/layout"
@@ -12,10 +12,10 @@ const PortfolioLink = <HeaderLink to="/portafolio">Portafolio</HeaderLink>
 const PortfolioTemplate = ({
   data: { mdx, previous, next, avatar, site },
   location,
+  children
 }) => {
   return (
-    <Layout location={location} header={PortfolioLink} footer={<PostFooter author={site.siteMetadata.author} avatar={avatar} previous={previous} next={next} />}>
-      <Seo title={mdx.frontmatter.title} />
+    <Layout header={PortfolioLink} footer={<PostFooter author={site.siteMetadata.author} job={site.siteMetadata.job} avatar={avatar} previous={previous} next={next} />}>
       <PortfolioPost
         title={mdx.frontmatter.title}
         role={mdx.frontmatter.role}
@@ -23,11 +23,15 @@ const PortfolioTemplate = ({
         image={mdx.frontmatter.image}
         gallery={mdx.frontmatter.gallery}
       >
-        <MDXRenderer>{mdx.body}</MDXRenderer>
+        <MDXProvider>
+          {children}
+        </MDXProvider>
       </PortfolioPost>
     </Layout>
   )
 }
+
+export const Head = () => <Seo title="Portafolio" />
 
 export const pageQuery = graphql`
   query PortafolioPostQuery($id: String, $previous: String, $next: String) {
@@ -76,10 +80,8 @@ export const pageQuery = graphql`
     }
     site {
       siteMetadata {
-        author {
-          name
-          job
-        }
+        author
+        job
       }
     }
   }

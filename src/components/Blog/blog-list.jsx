@@ -23,7 +23,7 @@ const PostList = ({ posts }) => (
         title={node.frontmatter.title}
         date={node.frontmatter.date}
         excerpt={node.excerpt}
-        slug={node.slug}
+        slug={node.fields.slug}
       />
     ))}
   </Flex>

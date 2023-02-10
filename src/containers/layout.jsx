@@ -1,6 +1,5 @@
 import React from "react"
 import { Themed } from "@theme-ui/mdx"
-import Helmet from "react-helmet"
 import { SkipNavLink } from "@reach/skip-nav"
 import VisuallyHidden from "@reach/visually-hidden"
 import "@reach/skip-nav/styles.css"
@@ -11,19 +10,10 @@ import SidebarContext from "../context/SidebarContext"
 import Main from "../components/ui/main"
 
 const Layout = ({ children, header, footer }) => {
-  const webfontURL =
-    "/fonts/fonts.css"
   return (
     <SidebarContext.Consumer>
       {sidebarOptions => (
         <Themed.root>
-          <Helmet>
-            <link rel="stylesheet" href={webfontURL} />
-            <meta
-              name="viewport"
-              content="width=device-width, minimum-scale=1"
-            ></meta>
-          </Helmet>
           <VisuallyHidden>
             <SkipNavLink>Saltar al contenido</SkipNavLink>
           </VisuallyHidden>
