@@ -5,7 +5,6 @@ import Layout from "../containers/layout"
 import Seo from "../containers/seo"
 import BlogPost from "../components/Blog/blog-post"
 import HeaderLink from "../components/Header/header-link"
-import { MDXProvider } from "@mdx-js/react"
 import PostFooter from "../components/Footer/post-footer"
 
 const BlogLink = <HeaderLink to="/blog">Blog</HeaderLink>
@@ -21,9 +20,7 @@ const BlogTemplate = ({
       date={mdx.frontmatter.date}
       image={mdx.frontmatter.image}
     >
-      <MDXProvider>
-        {children}
-      </MDXProvider>
+      {children}
     </BlogPost>
   </Layout>
 )

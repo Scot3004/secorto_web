@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
 import PortfolioPost from "../components/Portfolio/portfolio-post"
 import Seo from "../containers/seo"
 import Layout from "../containers/layout"
@@ -23,9 +22,7 @@ const PortfolioTemplate = ({
         image={mdx.frontmatter.image}
         gallery={mdx.frontmatter.gallery}
       >
-        <MDXProvider>
-          {children}
-        </MDXProvider>
+        {children}
       </PortfolioPost>
     </Layout>
   )

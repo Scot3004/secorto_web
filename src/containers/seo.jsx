@@ -7,6 +7,7 @@
 
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { useThemeUI } from "theme-ui"
 
 function Seo({
   description,
@@ -15,6 +16,7 @@ function Seo({
   imageAlt,
   children
 }) {
+  const { theme } = useThemeUI()
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -56,6 +58,7 @@ function Seo({
         name="viewport"
         content="width=device-width, minimum-scale=1"
       ></meta>
+      <meta name="theme-color" content={theme.colors.primary} />
       {children}
     </>
   )
