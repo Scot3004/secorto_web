@@ -10,7 +10,7 @@ const ColorModeSwitch = ({ afterToggle, ...props }) => {
     setColorMode(isDark ? `light` : `dark`)
     setTimeout(function () {
       afterToggle()
-      // TODO: Remove this
+      // TODO: Eliminar, workaround debido a que el cambio de color no se está aplicando correctamente
       location.reload(true);
     }, 400)
   }

@@ -37,7 +37,6 @@ function Seo({
     ? `${site.siteMetadata.siteUrl}${imageSource}`
     : null
   const imageAltText = imageAlt || metaDescription
-  const webfontURL = "/fonts/fonts.css"
   return (
     <>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
@@ -53,7 +52,6 @@ function Seo({
       <meta name="twitter:description" content={metaDescription} />
       <meta property="twitter:image" content={image} />
       <meta property="twitter:image:alt" content={imageAltText} />
-      <link rel="stylesheet" href={webfontURL} />
       <meta
         name="viewport"
         content="width=device-width, minimum-scale=1"
