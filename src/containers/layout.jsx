@@ -1,5 +1,4 @@
 import React from "react"
-import { Themed } from "@theme-ui/mdx"
 import { SkipNavLink } from "@reach/skip-nav"
 import VisuallyHidden from "@reach/visually-hidden"
 import "@reach/skip-nav/styles.css"
@@ -13,7 +12,7 @@ const Layout = ({ children, header, footer }) => {
   return (
     <SidebarContext.Consumer>
       {sidebarOptions => (
-        <Themed.root>
+        <div>
           <VisuallyHidden>
             <SkipNavLink>Saltar al contenido</SkipNavLink>
           </VisuallyHidden>
@@ -32,7 +31,7 @@ const Layout = ({ children, header, footer }) => {
           >
             {children}
           </Main>
-        </Themed.root>
+        </div>
       )}
     </SidebarContext.Consumer>
   )
