@@ -58,7 +58,7 @@ function Seo({
         name="viewport"
         content="width=device-width, minimum-scale=1"
       ></meta>
-      <meta name="theme-color" content={theme.colors.primary} />
+      <meta name="theme-color" content={theme.rawColors.primary} />
       {children}
     </>
   )

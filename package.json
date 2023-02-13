@@ -12,7 +12,7 @@
     "@emotion-icons/material-twotone": "^3.14.0",
     "@emotion/jest": "^11.10.0",
     "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
+    "@emotion/styled": "^11.10.5",
     "@mdx-js/react": "^2.3.0",
     "@reach/skip-nav": "^0.17.0",
     "@reach/visually-hidden": "^0.17.0",
@@ -70,7 +70,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "TZ=utc jest",
-    "lint": "eslint . --ext md,mdx"
+    "lint": "eslint . --ext md,mdx,js,jsx"
   },
   "repository": {
     "type": "git",

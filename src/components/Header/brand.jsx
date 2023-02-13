@@ -3,7 +3,7 @@ import { jsx } from "theme-ui"
 
 import HomePageLink from "./homepage-link"
 
-export default ({ title }) => (
+const Brand = ({ title }) => (
   <div
     sx={{
       display: "flex",
@@ -16,3 +16,5 @@ export default ({ title }) => (
     <span sx={{ ml: 2, fontSize: [42], color: "primary" }}>{title}</span>
   </div>
 )
+
+export default Brand
