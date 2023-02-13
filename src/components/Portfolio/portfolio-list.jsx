@@ -19,7 +19,7 @@ const PortfolioList = ({ posts }) => (
   >
     {posts.map(({ node }) => (
       <PortfolioLink
-        key={node.slug}
+        key={node.fields.slug}
         title={node.frontmatter.title}
         slug={node.fields.slug}
         image={node.frontmatter.image}
