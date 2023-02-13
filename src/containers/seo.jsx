@@ -1,17 +1,22 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+/**
+ * SEO component that queries for data with
+ * Gatsby's useStaticQuery React hook
+ *
+ * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
+ */
 
-function SEO({
+import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { useThemeUI } from "theme-ui"
+
+function Seo({
   description,
-  lang,
-  meta,
-  keywords = [],
   title,
   imageSource,
   imageAlt,
+  children
 }) {
+  const { theme } = useThemeUI()
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,10 +24,7 @@ function SEO({
           siteMetadata {
             title
             description
-            author {
-              name
-            }
-            siteUrl
+            author
           }
         }
       }
@@ -30,94 +32,34 @@ function SEO({
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const defaultTitle = site.siteMetadata?.title
   const image = imageSource
     ? `${site.siteMetadata.siteUrl}${imageSource}`
     : null
   const imageAltText = imageAlt || metaDescription
-
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          name: `og:image`,
-          content: image,
-        },
-        {
-          name: `og:image:alt`,
-          content: imageAltText,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:image`,
-          content: image,
-        },
-        {
-          name: `twitter:image:alt`,
-          content: imageAltText,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
-    />
+    <>
+      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <meta name="description" content={metaDescription} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content={image} />
+      <meta property="og:image:alt" content={imageAltText} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta property="twitter:image" content={image} />
+      <meta property="twitter:image:alt" content={imageAltText} />
+      <meta
+        name="viewport"
+        content="width=device-width, minimum-scale=1"
+      ></meta>
+      <meta name="theme-color" content={theme.rawColors.primary} />
+      {children}
+    </>
   )
 }
 
-SEO.defaultProps = {
-  lang: `es`,
-  meta: [],
-  keywords: [],
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
-  imageSource: PropTypes.string,
-}
-
-export default SEO
+export default Seo

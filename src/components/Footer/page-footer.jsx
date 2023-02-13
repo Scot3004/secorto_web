@@ -6,10 +6,10 @@ import { Fragment } from "react"
 import Bio from "../Bio/bio"
 import BaseFooter from "./base-footer"
 
-const PageFooter = ({ socialLinks, author, avatar }) => (
+const PageFooter = ({ socialLinks, author, job, avatar }) => (
   <BaseFooter>
     <Container>
-      <Bio author={author} avatar={avatar} />
+      <Bio author={author} job={job} avatar={avatar} />
       <div
         sx={{textAlign: "center"}}
       >

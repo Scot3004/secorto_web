@@ -1,11 +1,17 @@
 import Timeline from '../components/timeline'
 import timelineData from '../../content/timeline.yml'
+import PageTemplate from '../templates/page-template'
 import Intro from '../assets/intro.inline.svg'
-export const ExternalLink = ({...props}) => <a target="_blank" rel="noreferrer noopener" {...props}/>
+import Seo from '../containers/seo'
+export const ExternalLink = ({children, ...props}) => <a target="_blank" rel="noreferrer noopener" {...props}>{children}</a>
 
 export const metadata = {
   header: <Intro style={{background: '#1f1e24'}}/>,
 };
+
+export const Head = () => <Seo title="Home" />
+
+export default PageTemplate
 
 # Quien Soy
 

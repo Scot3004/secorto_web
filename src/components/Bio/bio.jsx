@@ -3,7 +3,7 @@ import { jsx } from "theme-ui"
 import { Flex, Box, Link } from "theme-ui"
 import AvatarImg from "../../assets/avatar.jpg"
 
-const Bio = ({ author, avatar }) => {
+const Bio = ({ author, job }) => {
   return (
     <Flex
       sx={{
@@ -15,7 +15,7 @@ const Bio = ({ author, avatar }) => {
     >
       <img
         src={AvatarImg}
-        alt={author.name}
+        alt={author}
         width={64}
         height={64}
         sx={{
@@ -34,11 +34,11 @@ const Bio = ({ author, avatar }) => {
           m: 0
         }}><Link sx={{
           textDecoration: 'none'
-        }} href="https://www.secorto.com/">{author.name}</Link></p>
+        }} href="https://www.secorto.com/">{author}</Link></p>
         <p sx={{
           m:0,
           fontSize: "0.8rem"
-        }}>{author.job}</p>
+        }}>{job}</p>
       </Box>
     </Flex>
   )

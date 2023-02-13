@@ -18,6 +18,6 @@ Aca he aprendido muchisimas cosas sobre estrategias de pruebas, habilidades blan
 En esta experiencia destaco la oportunidad de crear mi propio path de carrera y pasar de desarrollador a Quality Assurance (SDET es una rama de QA en la cual se requiere conocimientos tecnicos en desarrollo)
 Y aprendi la importancia que tiene desarrollar unas buenas pruebas en una aplicación y que se requiere para decir que una aplicación cumple o no con las expectativas de los clientes, ademas de la importancia que tiene la comunicación para tener equipos efectivos.
 
-Si gustas obtener mas información puedes visitar el sitio web <https://nearshore.perficient.com/>
+Si gustas obtener mas información puedes [visitar el sitio web de perficient](https://nearshore.perficient.com/)
 
-Si quieres trabajar en perficient puedes aplicar en <https://nearshore.perficient.com/careers/>
+O bien puedes [aplicar para trabajar en perficient](https://nearshore.perficient.com/careers/)

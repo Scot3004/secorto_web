@@ -14,8 +14,10 @@ import { useThemeUI } from "theme-ui"
 const Timeline = ({ data }) => {
   const { theme } = useThemeUI()
 
-  // TODO: Gatsby build: window.matchMedia('(prefers-reduced-motion: no-preference)').matches === true
-  const animationsEnabled = true
+  const isBrowser = typeof window !== "undefined"
+  const animationsEnabled = isBrowser ?
+    window.matchMedia('(prefers-reduced-motion: no-preference)').matches === true
+    : true
   return (
     <VerticalTimeline
       animate={animationsEnabled}

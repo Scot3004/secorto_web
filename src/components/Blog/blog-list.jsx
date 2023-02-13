@@ -19,11 +19,11 @@ const PostList = ({ posts }) => (
   >
     {posts.map(({ node }) => (
       <PostLink
-        key={node.slug}
+        key={node.fields.slug}
         title={node.frontmatter.title}
         date={node.frontmatter.date}
         excerpt={node.excerpt}
-        slug={node.slug}
+        slug={node.fields.slug}
       />
     ))}
   </Flex>

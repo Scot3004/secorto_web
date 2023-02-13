@@ -1,15 +1,14 @@
 import React from "react"
-import Layout from "./layout"
-import Seo from "./seo"
+import Layout from "../containers/layout"
 import Header from "../components/Header/header"
 import Footer from "../components/Footer/page-footer"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 import { useAvatar } from "../hooks/use-avatar"
 import ContentWrapper from "../components/ui/content-wrapper"
 
-const PageLayout = ({ location, children, metadata }) => {
+const PageTemplate = ({ children, metadata }) => {
   const avatar = useAvatar()
-  const { title, social, author } = useSiteMetadata()
+  const { title, social, author, job } = useSiteMetadata()
 
   const pageTitle = metadata?.title ? metadata.title : title
   const pageHeader = metadata?.header ? (
@@ -18,11 +17,10 @@ const PageLayout = ({ location, children, metadata }) => {
     <Header>{pageTitle}</Header>
   )
 
-  const footer = <Footer socialLinks={social} author={author} avatar={avatar} />
+  const footer = <Footer socialLinks={social} author={author} job={job} avatar={avatar} />
 
   return (
-    <Layout location={location} header={pageHeader} footer={footer}>
-      <Seo title={pageTitle} />
+    <Layout header={pageHeader} footer={footer}>
       <ContentWrapper>
         {children}
       </ContentWrapper>
@@ -30,4 +28,4 @@ const PageLayout = ({ location, children, metadata }) => {
   )
 }
 
-export default PageLayout
+export default PageTemplate

@@ -7,10 +7,8 @@ export const useSiteMetadata = () => {
           siteMetadata {
             title
             description
-            author {
-              name
-              job
-            }
+            author
+            job
             siteUrl
             social {
               name

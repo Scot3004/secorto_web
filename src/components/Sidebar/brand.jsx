@@ -6,7 +6,7 @@ import Logo from "../../assets/logo.inline.svg"
 import { useSiteMetadata } from "../../hooks/use-site-metadata"
 
 const Brand = ({ setOpen }) => {
-  const { author } = useSiteMetadata()
+  const { author, job } = useSiteMetadata()
 
   return (
     <div>
@@ -23,9 +23,9 @@ const Brand = ({ setOpen }) => {
         }}
       >
         <Logo sx={{ width: 128 }} />
-        <p sx={{ fontSize: "1.5rem", mb: "0.5rem" }}>{author.name}</p>
+        <p sx={{ fontSize: "1.5rem", mb: "0.5rem" }}>{author}</p>
         <p sx={{ fontSize: 16, color: "sidebar.color", margin: 0 }}>
-          {author.job}
+          {job}
         </p>
       </Link>
       <hr sx={{ width: "10%", margin: "10px auto 0" }}></hr>
