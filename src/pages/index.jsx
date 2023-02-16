@@ -1,3 +1,4 @@
+import React from 'react';
 import Timeline from '../components/timeline'
 import timelineData from '../../content/timeline.yml'
 import PageTemplate from '../templates/page-template'
@@ -7,9 +8,11 @@ import About from '../blocks/about.mdx'
 
 export const Head = () => <Seo title="Home" />
 
-export default () => (
+const IndexPage = () => (
 <PageTemplate pageHeader={<Intro style={{background: '#1f1e24'}}/>}>
-  <About components={{ExternalLink: ({children, ...props}) => <a target="_blank" rel="noreferrer noopener" {...props}>{children}</a>}}/>
+  <About/>
   <Timeline data={timelineData} />
 </PageTemplate>
 )
+
+export default IndexPage
