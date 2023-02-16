@@ -6,14 +6,12 @@ import { useSiteMetadata } from "../hooks/use-site-metadata"
 import { useAvatar } from "../hooks/use-avatar"
 import ContentWrapper from "../components/ui/content-wrapper"
 
-const PageTemplate = ({ children, metadata }) => {
+const PageTemplate = ({ children, metadata, pageHeader }) => {
   const avatar = useAvatar()
   const { title, social, author, job } = useSiteMetadata()
 
   const pageTitle = metadata?.title ? metadata.title : title
-  const pageHeader = metadata?.header ? (
-    metadata.header
-  ) : (
+  pageHeader = pageHeader ? pageHeader : (
     <Header>{pageTitle}</Header>
   )
 

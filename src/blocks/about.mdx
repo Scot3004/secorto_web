@@ -1,17 +1,4 @@
-import Timeline from '../components/timeline'
-import timelineData from '../../content/timeline.yml'
-import PageTemplate from '../templates/page-template'
-import Intro from '../assets/intro.inline.svg'
-import Seo from '../containers/seo'
-export const ExternalLink = ({children, ...props}) => <a target="_blank" rel="noreferrer noopener" {...props}>{children}</a>
-
-export const metadata = {
-  header: <Intro style={{background: '#1f1e24'}}/>,
-};
-
-export const Head = () => <Seo title="Home" />
-
-export default PageTemplate
+import ExternalLink from "../components/ui/external-link"
 
 # Quien Soy
 
@@ -46,5 +33,3 @@ y he tenido la oportunidad de compartir mis conocimientos a través de charlas e
 - <ExternalLink href="https://pybaq.co/">Python Barranquilla</ExternalLink>
 - <ExternalLink href="https://www.meetup.com/es-ES/node_co/">NodeCO</ExternalLink>
 - <ExternalLink href="https://www.youtube.com/channel/UCg3CbitWrKu37px9y_wC6Eg">JamStack Medellin</ExternalLink>
-
-<Timeline data={timelineData} />

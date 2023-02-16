@@ -7,5 +7,9 @@
     // if you want to override the default language mapper inside, you can provide your own
     "mdx/language-mapper": {}
   },
-  "ignorePatterns": ["**/public/*.js", "**/public/**/*.js"]
+  "ignorePatterns": [
+    "**/public/*.js",
+    "**/public/**/*.js",
+    "content/blog/2022-08-14-screenpy.mdx" //Presentación de power point no carga y saca errores
+  ]
 }

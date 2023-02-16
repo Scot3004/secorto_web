@@ -96,11 +96,18 @@ module.exports = {
         path: `${__dirname}/content/portafolio`,
       },
     },
-        {
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
         path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blocks`,
+        path: `${__dirname}/src/blocks`,
       },
     },
     `gatsby-transformer-sharp`,
