@@ -23,7 +23,7 @@ export const onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
     />,
     <link
       rel="preload"
-      href="/fonts/alegreya-sans-v21-latin-700italic.woff2"
+      href="/fonts/alegreya-sans-v21-latin-500.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
