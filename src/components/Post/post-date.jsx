@@ -11,6 +11,7 @@ const PostDate = ({ children, ...props }) => (
           position: "relative",
           top: "-2px",
         }}
+        title="Fecha"
       />{" "}
       {new Intl.DateTimeFormat("es-CO", { dateStyle: "full" }).format(
         new Date(children)

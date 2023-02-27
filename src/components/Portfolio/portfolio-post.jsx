@@ -26,6 +26,7 @@ const PortfolioPost = ({
             position: "relative",
             top: "-2px",
           }}
+          title="Rol"
         />
         {role}
       </p>
@@ -36,6 +37,7 @@ const PortfolioPost = ({
             position: "relative",
             top: "-2px",
           }}
+          title="Tareas"
         />
         {responsibilities}
       </p>

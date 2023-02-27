@@ -8,21 +8,21 @@ const TimelineElement = ({ item }) => {
 
   const timelineTypeProps = {
     academic: {
-      icon: <School />,
+      icon: <School title="Educación" />,
       iconStyle: {
         background: theme.colors.timeline.academicBG,
         color: theme.colors.timeline.iconColor,
       },
     },
     work: {
-      icon: <Work />,
+      icon: <Work title="Trabajo" />,
       iconStyle: {
         background: theme.colors.timeline.previousWorkBG,
         color: theme.colors.timeline.iconColor,
       },
     },
     currentWork: {
-      icon: <Work />,
+      icon: <Work title="Trabajo" />,
       iconStyle: {
         background: theme.colors.timeline.workBG,
         color: theme.colors.timeline.iconColor,
