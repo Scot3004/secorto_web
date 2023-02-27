@@ -1,17 +1,19 @@
-const purple60 = `#663399`
+const purple60 = `#E7B8FF`
 const purple90 = `#993399`
 const purple30 = `#D9BAE8`
 const grey90 = `#1F1E24`
 const black80 = `#1B1F23`
 const lightBlue = `#B8FFFF`
 const white = `#fff`
-const lightWhite = `rgba(255, 255, 255, 0.86)`
+const lightWhite = `#DCDCDC`
 const opaqueLightYellow = `rgba(255, 229, 100, 0.2)`
 const opaqueLightWhite = `hsla(0, 0%, 100%, 0.2)`
 const lightGray = `hsla(0, 0%, 0%, 0.2)`
 const darkCyan = "#004f53"
 const darkPurple = "#993399"
-const lightCyan = "#A2C3C3"
+const lightCyan = "#91DEDE"
+const darkBrown = '#130302'
+const darkGray = '#0a0a0a'
 
 const colors = {
   text: "#222",
@@ -52,14 +54,14 @@ const colors = {
   modes: {
     dark: {
       text: lightWhite,
-      background: grey90,
+      background: darkBrown,
       primary: lightCyan,
       hover: purple30,
       secondary: lightWhite,
       muted: opaqueLightWhite,
       highlight: purple60,
       heading: white,
-      blogBg: "#2b2a32"
+      blogBg: darkGray
     },
   },
 }
