@@ -1,0 +1,42 @@
+name: Reporte de error
+description: Genera un reporte de error para ayudarnos a mejorar
+labels: ["type: bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Bienvenido 👋
+        Gracias por ayudarme reportando este defecto
+        por favor rellena los siguientes campos ya que esto hará mas fácil la reproducción del defecto para poder solucionarlo
+  - type: checkboxes
+    attributes:
+      label: Verificaciones preliminares
+      description: Por favor asegúrese de verificar cada una de las casillas de verificación y de seguir las instrucciones de cada una de ellas.
+      options:
+        - label: "Este issue (o propuesta) no es un duplicado, antes de abrir un nuevo issue por favor verifique que no esté reportado acá https://github.com/Scot3004/secorto_web/issues"
+          required: true
+  - type: textarea
+    attributes:
+      label: Comportamiento esperado
+      description: Describe el comportamiento que debería tener el sitio web.
+      placeholder: Se tan preciso como puedas y de ser posible adjunta una imagen de como debería funcionar el sitio web.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Comportamiento Actual
+      description: Describe el comportamiento que debería tener el sitio web.
+      placeholder: Se tan preciso como puedas y de ser posible adjunta una imagen de lo que esta sucediendo, o bien la data de algún dev tools.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Pasos para reproducir el error
+      description: Definir paso a paso las acciones para reproducir el error.
+      value: |
+        1.
+        2.
+        3.
+        ...
+    validations:
+      required: true

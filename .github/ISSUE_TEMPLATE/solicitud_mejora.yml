@@ -1,0 +1,41 @@
+name: Solicitud de mejora
+description: Encontraste algo que crees que debería tener el sitio web
+labels: ["type: enhancement "]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Bienvenido 👋
+        Parece que consideras que mi sitio web tiene oportunidad de tener nuevas características
+  - type: checkboxes
+    attributes:
+      label: Verificaciones preliminares
+      description: Por favor asegúrese de verificar cada una de las casillas de verificación y de seguir las instrucciones de cada una de ellas.
+      options:
+        - label: "Este issue (o propuesta) no es un duplicado, antes de abrir un nuevo issue por favor verifique que no esté reportado acá https://github.com/Scot3004/secorto_web/issues"
+          required: true
+  - type: textarea
+    attributes:
+      label: Solicitud de mejora en sitio web
+      description: Especifica como se puede implementar la mejora que sugieres para el sitio web.
+      placeholder: Se tan preciso como puedas y de ser posible adjunta una imagen de como debería funcionar el sitio web.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Ventajas
+      description: Que ventajas supone lo que estás sugiriendo a futuro.
+      value: |
+        1.
+        2.
+        3.
+        ...
+  - type: textarea
+    attributes:
+      label: Desventajas
+      description: Cuales crees que podrían ser los inconvenientes que pueda ocasionar la implementación de lo que estás sugiriendo a futuro.
+      value: |
+        1.
+        2.
+        3.
+        ...
