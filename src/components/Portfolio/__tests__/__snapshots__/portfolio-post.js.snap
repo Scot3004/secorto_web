@@ -37,15 +37,18 @@ exports[`PortfolioPost renders correctly 1`] = `
     </h1>
     <p>
       <svg
-        aria-hidden="true"
         className="emotion-2 emotion-3"
         fill="currentColor"
         focusable="false"
         height={24}
+        role="img"
         viewBox="0 0 24 24"
         width={24}
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          Rol
+        </title>
         <path
           d="M0 0h24v24H0V0z"
           fill="none"
@@ -68,15 +71,18 @@ exports[`PortfolioPost renders correctly 1`] = `
     </p>
     <p>
       <svg
-        aria-hidden="true"
         className="emotion-2 emotion-3"
         fill="currentColor"
         focusable="false"
         height={24}
+        role="img"
         viewBox="0 0 24 24"
         width={24}
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          Tareas
+        </title>
         <rect
           fill="none"
           height={24}
