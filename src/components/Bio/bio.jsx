@@ -15,7 +15,7 @@ const Bio = ({ author, job }) => {
     >
       <img
         src={AvatarImg}
-        alt={author}
+        alt="Foto destacada"
         width={64}
         height={64}
         sx={{

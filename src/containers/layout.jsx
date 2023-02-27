@@ -12,7 +12,7 @@ const Layout = ({ children, header, footer }) => {
       {sidebarOptions => (
         <div>
           <VisuallyHidden>
-            <a href={`#${MAIN_CONTENT_ID}}`}>Saltar al contenido</a>
+            <a href={`#${MAIN_CONTENT_ID}`}>Saltar al contenido</a>
           </VisuallyHidden>
           <BurgerButton
             open={sidebarOptions.open}
