@@ -3,4 +3,4 @@ Disallow: /404
 Disallow: /404-dev
 Disallow: /offline-plugin-app-shell-fallback
 
-Sitemap: https://www.secorto.com/sitemap/sitemap-index.xml
+Sitemap: https://www.secorto.com/sitemap-index.xml
