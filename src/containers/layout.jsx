@@ -1,12 +1,9 @@
 import React from "react"
-import { SkipNavLink } from "@reach/skip-nav"
-import VisuallyHidden from "@reach/visually-hidden"
-import "@reach/skip-nav/styles.css"
-
 import Sidebar from "../components/Sidebar/sidebar"
 import BurgerButton from "../components/Sidebar/burger-button"
 import SidebarContext from "../context/SidebarContext"
 import Main from "../components/ui/main"
+import VisuallyHidden from "../components/ui/visually-hidden"
 
 const Layout = ({ children, header, footer }) => {
   return (
@@ -14,7 +11,7 @@ const Layout = ({ children, header, footer }) => {
       {sidebarOptions => (
         <div>
           <VisuallyHidden>
-            <SkipNavLink>Saltar al contenido</SkipNavLink>
+            <a href="#main-content">Saltar al contenido</a>
           </VisuallyHidden>
           <BurgerButton
             open={sidebarOptions.open}

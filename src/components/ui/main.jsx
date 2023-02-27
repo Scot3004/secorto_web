@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { Container, jsx } from "theme-ui"
-import { SkipNavContent } from "@reach/skip-nav"
 
 const Main = ({ children, sidebarOpen, header, footer }) => (
   <div
@@ -13,11 +12,10 @@ const Main = ({ children, sidebarOpen, header, footer }) => (
   >
     {header}
     <Container>
-      <SkipNavContent />
-        <div sx={{pb: "5.3rem"}}>
-          {children}
-        </div>
-      </Container>
+      <div sx={{pb: "5.3rem"}} id="main-content">
+        {children}
+      </div>
+    </Container>
     {footer}
   </div>
 )

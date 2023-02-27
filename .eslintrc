@@ -7,6 +7,13 @@
     // if you want to override the default language mapper inside, you can provide your own
     "mdx/language-mapper": {}
   },
+  "rules": {
+    "react/jsx-pascal-case": [
+      2, {
+        "allowNamespace": true
+      }
+    ]
+  },
   "ignorePatterns": [
     "**/public/*.js",
     "**/public/**/*.js",

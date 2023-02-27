@@ -14,8 +14,6 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.5",
     "@mdx-js/react": "^2.3.0",
-    "@reach/skip-nav": "^0.17.0",
-    "@reach/visually-hidden": "^0.17.0",
     "@theme-ui/css": "^0.15.5",
     "@theme-ui/mdx": "^0.15.5",
     "@theme-ui/prism": "^0.15.5",
