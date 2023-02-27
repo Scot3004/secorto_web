@@ -1,0 +1,15 @@
+
+blank_issues_enabled: false
+contact_links:
+  - name: Sitio web
+    url: https://www.secorto.com
+    about: Este es el sitio web relacionado a este repositorio
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/scot3004/
+    about: Creo que LinkedIn es el lugar mas apropiado para conversar temas laborales, puedes agregarme siguiendo el link
+  - name: Twitter
+    url: https://twitter.com/scot3004
+    about: Twitter lo uso para ver noticias, igual puedes agregarme a esta red social
+  - name: Facebook
+    url: https://facebook.com/scot3004
+    about: Facebook lo uso para cuestiones muy personales, si nos conocemos genial que me agregues acá
