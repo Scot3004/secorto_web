@@ -10,9 +10,7 @@ import PortfolioList from "../components/Portfolio/portfolio-list"
 const PortfolioPosts = ({ data, location }) => (
   <Layout location={location} header={<Header>Portafolio</Header>} footer={ <FooterContainer />}>
     <Seo title="Portafolio" />
-    <main>
-      <PortfolioList posts={data.allMdx.edges} />
-    </main>
+    <PortfolioList posts={data.allMdx.edges} />
   </Layout>
 )
 

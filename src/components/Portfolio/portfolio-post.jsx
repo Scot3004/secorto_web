@@ -15,7 +15,7 @@ const PortfolioPost = ({
   gallery,
   image,
 }) => (
-  <main>
+  <div>
     <PostHero image={image} alt={title} />
     <ContentWrapper>
       <PostTitle sx={{ mt: 3 }}>{title}</PostTitle>
@@ -44,7 +44,7 @@ const PortfolioPost = ({
       {children}
       <Gallery items={gallery} galleryId="galeria-portafolio" />
     </ContentWrapper>
-  </main>
+  </div>
 )
 
 export default PortfolioPost

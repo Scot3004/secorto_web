@@ -22,7 +22,7 @@ exports[`PortfolioPost renders correctly 1`] = `
   margin: 0.5rem;
 }
 
-<main>
+<div>
   <img
     alt="portfolio-post"
     src="testImage"
@@ -141,5 +141,5 @@ exports[`PortfolioPost renders correctly 1`] = `
       </a>
     </div>
   </div>
-</main>
+</div>
 `;

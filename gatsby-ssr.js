@@ -12,14 +12,18 @@ const webfontURL = "/fonts/fonts.css"
 export const onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
   setHtmlAttributes({ lang: `es` })
   setHeadComponents([
-    <link rel="stylesheet" href={webfontURL} />,
+    <link
+      rel="stylesheet"
+      href={webfontURL}
+      key="webFont"
+    />,
     <link
       rel="preload"
       href="/fonts/kalam-v16-latin-regular.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
-      key="interFont"
+      key="preloadFontKalam"
     />,
     <link
       rel="preload"
@@ -27,7 +31,7 @@ export const onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
-      key="interFont"
+      key="preloadFontAlegreya"
     />
   ])
 }

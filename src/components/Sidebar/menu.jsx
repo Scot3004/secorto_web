@@ -24,6 +24,7 @@ const Menu = ({ children, open }) => (
       },
       a: {
         fontSize: "1.2rem",
+        fontWeight: 500,
         color: theme => theme.colors.sidebar.color,
         fontFamily: "heading",
         textDecoration: "none",
