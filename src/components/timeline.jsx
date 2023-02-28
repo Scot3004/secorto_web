@@ -44,7 +44,7 @@ const Timeline = ({ data }) => {
           background: theme.colors.timeline.previousWorkBG,
           color: theme.colors.timeline.iconColor,
         }}
-        icon={<Star />}
+        icon={<Star title="Fin de sección de logros" />}
       ></VerticalTimelineElement>
     </VerticalTimeline>
   )

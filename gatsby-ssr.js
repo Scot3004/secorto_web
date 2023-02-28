@@ -12,22 +12,26 @@ const webfontURL = "/fonts/fonts.css"
 export const onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
   setHtmlAttributes({ lang: `es` })
   setHeadComponents([
-    <link rel="stylesheet" href={webfontURL} />,
+    <link
+      rel="stylesheet"
+      href={webfontURL}
+      key="webFont"
+    />,
     <link
       rel="preload"
       href="/fonts/kalam-v16-latin-regular.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
-      key="interFont"
+      key="preloadFontKalam"
     />,
     <link
       rel="preload"
-      href="/fonts/alegreya-sans-v21-latin-700italic.woff2"
+      href="/fonts/alegreya-sans-v21-latin-500.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
-      key="interFont"
+      key="preloadFontAlegreya"
     />
   ])
 }

@@ -10,9 +10,7 @@ import PostList from "../components/Blog/blog-list"
 const BlogPosts = ({ data, location }) => (
   <Layout location={location} header={<Header>Blog</Header>} footer={<FooterContainer />}>
     <Seo title="Blog" />
-    <main>
-      <PostList posts={data.allMdx.edges} />
-    </main>
+    <PostList posts={data.allMdx.edges} />
   </Layout>
 )
 

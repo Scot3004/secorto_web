@@ -38,15 +38,18 @@ exports[`BlogPost renders correctly 1`] = `
   >
     <small>
       <svg
-        aria-hidden="true"
         className="emotion-3 emotion-4"
         fill="currentColor"
         focusable="false"
         height={16}
+        role="img"
         viewBox="0 0 24 24"
         width={16}
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          Fecha
+        </title>
         <path
           d="M0 0h24v24H0V0z"
           fill="none"

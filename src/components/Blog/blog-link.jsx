@@ -18,12 +18,13 @@ const PostLink = ({ title, slug, date, excerpt, image }) => (
     <Text
       sx={{
         color: "primary",
-        fontFamily: "heading",
+        fontFamily: "heading"
       }}
     >
       <h2
         sx={{
           margin: 0,
+          fontWeight: "heading"
         }}
       >
         {title}

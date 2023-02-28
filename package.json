@@ -49,7 +49,6 @@
     "react-vertical-timeline-component": "^3.5.2",
     "theme-ui": "^0.15.5",
     "typescript": "^4.9.5",
-    "typography-theme-de-young": "^0.16.19",
     "webpack": "^5.75.0"
   },
   "devDependencies": {

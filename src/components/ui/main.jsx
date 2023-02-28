@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { Container, jsx } from "theme-ui"
+import { MAIN_CONTENT_ID } from "../../constants"
 
 const Main = ({ children, sidebarOpen, header, footer }) => (
   <div
@@ -11,11 +12,11 @@ const Main = ({ children, sidebarOpen, header, footer }) => (
     }}
   >
     {header}
-    <Container>
-      <div sx={{pb: "5.3rem"}} id="main-content">
+    <main sx={{pb: "5.3rem"}} id={MAIN_CONTENT_ID}>
+      <Container>
         {children}
-      </div>
-    </Container>
+      </Container>
+    </main>
     {footer}
   </div>
 )
