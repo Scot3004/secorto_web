@@ -46,7 +46,7 @@ const Burger = ({ open, setOpen }) => {
       <BurgerIcon
         open={open}
         onClick={() => setOpen(!open)}
-        aria-label="Toggle sidebar"
+        aria-label="Alternar barra lateral"
       >
         <div
           sx={{

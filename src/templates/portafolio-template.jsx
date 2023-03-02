@@ -4,17 +4,16 @@ import PortfolioPost from "../components/Portfolio/portfolio-post"
 import Seo from "../containers/seo"
 import Layout from "../containers/layout"
 import HeaderLink from "../components/Header/header-link"
-import PostFooter from "../components/Footer/post-footer"
+import PostFooter from "../containers/post-footer"
 
 const PortfolioLink = <HeaderLink to="/portafolio">Portafolio</HeaderLink>
 
 const PortfolioTemplate = ({
-  data: { mdx, previous, next, avatar, site },
-  location,
+  data: { mdx, previous, next },
   children
 }) => {
   return (
-    <Layout header={PortfolioLink} footer={<PostFooter author={site.siteMetadata.author} job={site.siteMetadata.job} avatar={avatar} previous={previous} next={next} />}>
+    <Layout header={PortfolioLink} footer={<PostFooter previous={previous} next={next} />}>
       <PortfolioPost
         title={mdx.frontmatter.title}
         role={mdx.frontmatter.role}
@@ -47,9 +46,7 @@ export const pageQuery = graphql`
         gallery {
           alt
           image {
-            full: childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
-            }
+            publicURL
             thumbnail: childImageSharp {
               gatsbyImageData(width: 200)
             }
@@ -73,12 +70,6 @@ export const pageQuery = graphql`
       }
       fields {
         slug
-      }
-    }
-    site {
-      siteMetadata {
-        author
-        job
       }
     }
   }

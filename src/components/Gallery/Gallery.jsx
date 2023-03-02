@@ -9,7 +9,7 @@ const Gallery = ({ items, galleryId }) => (
       const image = getImage(item.image.thumbnail)
       return (
         <a
-          href={getSrc(item.image.full)}
+          href={item.image.publicURL}
           target="_blank"
           rel="noreferrer"
           key={galleryId + '-' + index}
