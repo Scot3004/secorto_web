@@ -119,24 +119,24 @@ exports[`PortfolioPost renders correctly 1`] = `
     >
       <a
         className="emotion-6"
-        href="testSrc"
+        href="srcImg1"
         rel="noreferrer"
         target="_blank"
       >
         <img
           alt="img1"
-          src="img1"
+          src="thumbImg1"
         />
       </a>
       <a
         className="emotion-6"
-        href="testSrc"
+        href="srcImg2"
         rel="noreferrer"
         target="_blank"
       >
         <img
           alt="img2"
-          src="img1"
+          src="thumbImg1"
         />
       </a>
     </div>

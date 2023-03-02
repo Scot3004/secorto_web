@@ -5,13 +5,15 @@ import PortfolioPost from "../portfolio-post"
 const gallery = [
   {
     image: {
-      thumbnail: "img1",
+      publicURL: "srcImg1",
+      thumbnail: "thumbImg1",
     },
     alt: "img1",
   },
   {
     image: {
-      thumbnail: "img1",
+      publicURL: "srcImg2",
+      thumbnail: "thumbImg1",
     },
     alt: "img2",
   },
