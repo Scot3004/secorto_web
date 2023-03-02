@@ -13,7 +13,7 @@ module.exports = {
       `gatsby-plugin-utils/$1`,
     ], // Workaround for https://github.com/facebook/jest/issues/9771
   },
-  testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
+  testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`, 'cypress'],
   transformIgnorePatterns: [`node_modules/(?!(gatsby|gatsby-script|gatsby-link|photoswipe)/)`],
   globals: {
     __PATH_PREFIX__: ``,

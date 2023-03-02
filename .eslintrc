@@ -19,5 +19,11 @@
     "**/public/*.js",
     "**/public/**/*.js",
     "content/blog/2022-08-14-screenpy.mdx" //Presentación de power point no carga y saca errores
-  ]
+  ],
+  "plugins": [
+    "cypress"
+  ],
+  "env": {
+    "cypress/globals": true
+  }
 }
