@@ -6,7 +6,7 @@ describe("BlogPost", () => {
   it("renders correctly", () => {
     const tree = renderer
       .create(
-        <BlogPost title="blog-post" image="testImage" date="2021-10-14">
+        <BlogPost title="blog-post" image="testImage" date="October 14, 2021">
           content
         </BlogPost>
       )

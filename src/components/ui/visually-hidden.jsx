@@ -9,7 +9,9 @@ const VisuallyHidden = ({children, ...props}) => (
     overflow: "hidden",
     position: "absolute",
     whiteSpace: "nowrap",
-    width: "1px"
+    width: "1px",
+    backgroundColor: "#fff",
+    color: "#000"
   }} {...props}>
     {children}
   </div>

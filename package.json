@@ -72,12 +72,13 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "TZ=utc jest",
+    "test:unit": "jest",
     "lint": "eslint . --ext md,mdx,js,jsx",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
-    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run"
+    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
+    "test": "npm run test:unit && npm run test:e2e:ci"
   },
   "repository": {
     "type": "git",
