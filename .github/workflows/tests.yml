@@ -11,4 +11,4 @@ jobs:
           cache: 'yarn'
       - run: corepack enable
       - run: yarn install --frozen-lockfile # optional, --immutable
-      - run: yarn test
+      - run: yarn test:unit
