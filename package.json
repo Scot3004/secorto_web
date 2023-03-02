@@ -54,6 +54,7 @@
   "devDependencies": {
     "@testing-library/cypress": "^9.0.0",
     "axe-core": "^4.6.3",
+    "concurrently": "^7.6.0",
     "cypress": "^12.7.0",
     "cypress-axe": "^1.4.0",
     "eslint-plugin-cypress": "^2.12.1",
@@ -78,7 +79,7 @@
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
-    "test": "npm run test:unit && npm run test:e2e:ci"
+    "test": "concurrently 'npm run test:unit' 'npm run test:e2e:ci'"
   },
   "repository": {
     "type": "git",
