@@ -59,7 +59,7 @@
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const resultBlog = await graphql(`
-    query {
+    query BlogPostsQuery {
       allMdx(
         filter: { fields: { contentType: { eq: "blog" } } }
         sort: { frontmatter: { date: DESC } }
@@ -89,7 +89,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   createPostTypePages(resultBlog, actions, reporter, "Blog")
 
   const resultPortafolio = await graphql(`
-    query {
+    query PortafolioPostsQuery {
       allMdx(
         filter: { fields: { contentType: { eq: "portafolio" } } }
         sort: { frontmatter: { title: ASC } }

@@ -5,16 +5,15 @@ import Layout from "../containers/layout"
 import Seo from "../containers/seo"
 import BlogPost from "../components/Blog/blog-post"
 import HeaderLink from "../components/Header/header-link"
-import PostFooter from "../components/Footer/post-footer"
+import PostFooter from "../containers/post-footer"
 
 const BlogLink = <HeaderLink to="/blog">Blog</HeaderLink>
 
 const BlogTemplate = ({
-  data: { mdx, previous, next, site, avatar },
-  location,
+  data: { mdx, previous, next },
   children
 }) => (
-  <Layout header={BlogLink} footer={<PostFooter author={site.siteMetadata.author} job={site.siteMetadata.job} avatar={avatar} previous={previous} next={next} />}>
+  <Layout header={BlogLink} footer={<PostFooter previous={previous} next={next} />}>
     <BlogPost
       title={mdx.frontmatter.title}
       date={mdx.frontmatter.date}
@@ -58,12 +57,6 @@ export const pageQuery = graphql`
       }
       fields {
         slug
-      }
-    }
-    site {
-      siteMetadata {
-        author
-        job
       }
     }
   }
