@@ -29,8 +29,12 @@ Reemplaza el contenido de acuerdo a lo que quieres reportar para lo cual aparece
 
 ![Diligenciar los campos requeridos](./issue_bug.png)
 
+### Discussions
 
-### Discusions
+Esta funcionalidad permite tener un foro en el repositorio donde se pueden discutir funcionalidades, de hecho surge como una mejora al tipo issue que ya tenia github
+
+![Discussions](./discussions.png)
+
 ## Desarrollo
 
 Para el desarrollo de cualquiera de las tareas creadas (issues) recomiendo hacer la instalación de node usando la misma versión que veas en el archivo [.nvmrc](.nvmrc) e instala [yarn](https://yarnpkg.com/) el puedes habilitarlo en las versiones mas recientes usando el comando `corepack enable`
@@ -73,11 +77,11 @@ Esta es una vista rápida del primer nivel de directorio que veras en este proye
 
 9. **`gatsby-ssr.js`**: En este archivo se espera encontrar las configuraciones de [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/).
 
-10. **`LICENSE`**: Aca encuentras los terminos de licencia del código que estás viendo
+10. **`LICENSE`**: Aca encuentras los términos de licencia del código que estás viendo
 
 11. **`package.json`**: Es un manifiesto para los proyectos hechos con Node.js, que incluye cosas como los meta-datos (como el nombre del proyecto, autor, etc) con este archivo es que node sabe que paquetes instalar.
 
-12. **`yarn.lock`** Este es un archivo auto-generado por yarn que incluye las versiones exactas de los paquetes npm. **(Este archivo no deberias modificarlo manualmente).**
+12. **`yarn.lock`** Este es un archivo auto-generado por yarn que incluye las versiones exactas de los paquetes npm. **(Este archivo no deberías modificarlo manualmente).**
 
 13. **`/node_modules`**: Este directorio contiene todos los módulos de los que tu proyecto depende (paquetes npm) y son automáticamente instalados.
 
@@ -194,4 +198,4 @@ Panel de administración de netlify
 ![Deploy preview en netlify](./netlify_preview_deploy.png)
 
 Github action
-![Ejecución de la accion jest](./github_action_jest.png)
+![Ejecución de la acción jest](./github_action_jest.png)

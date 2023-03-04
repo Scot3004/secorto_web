@@ -28,4 +28,4 @@ En este [enlace al archivo security.md](./SECURITY.md) puedes ver como puedes re
 
 ## Copyright y licencia
 
-Copyright 2023 Scot3004. Este código es lanzado bajo licencia [MIT](LICENSE), también puedes ver [los terminos de la licencia MIT traducidos al español](LICENSE_es)
+Copyright 2023 Scot3004. Este código es lanzado bajo licencia [MIT](LICENSE), también puedes ver [los términos de la licencia MIT traducidos al español](LICENSE_es)
