@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { GatsbyImage, getSrc, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import PhotoSwipeAdapter from './PhotoSwipeAdapter';
 
 const Gallery = ({ items, galleryId }) => (
