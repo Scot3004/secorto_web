@@ -39,14 +39,6 @@ export const query = graphql`
         }
       }
     }
-    site {
-      siteMetadata {
-        social {
-          name
-          url
-        }
-      }
-    }
   }
 `
 
