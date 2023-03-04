@@ -9,9 +9,17 @@ Muchas gracias por el interés en este repositorio el cual corresponde a mi siti
 
 Para el análisis de las tareas a desarrollar se usaran issues y discussions, los cuales deben estar detallados y para ello se facilitan una serie de plantillas que ayudan con su creación
 
+Para los issues resalto 2 categorías que implican cambios en el código, y las preguntas considero que es mejor tratarlas como discussions
+
+### Issues
+
 Puedes crear nuevos incidentes (issues) usando el botón "New issue" en la pestaña "Issues" del repositorio
 
 ![Reportar issue](./issues.png)
+
+Reporte de error: En esta categoría se enumeran todos los comportamientos inesperados (o defectos), ya sean visuales o bien algún error que aparezca en la consola del navegador
+
+Solicitud mejora: Estos se darán cuando haya algo que se pueda mejorar en el sitio web, ya sea que se pueda adicionar una nueva funcionalidad o bien cambiar el comportamiento de alguna existente.
 
 Selecciona una de las plantillas según el tipo de incidente que deseas reportar presionando el respectivo botón "Get started"
 
@@ -21,6 +29,8 @@ Reemplaza el contenido de acuerdo a lo que quieres reportar para lo cual aparece
 
 ![Diligenciar los campos requeridos](./issue_bug.png)
 
+
+### Discusions
 ## Desarrollo
 
 Para el desarrollo de cualquiera de las tareas creadas (issues) recomiendo hacer la instalación de node usando la misma versión que veas en el archivo [.nvmrc](.nvmrc) e instala [yarn](https://yarnpkg.com/) el puedes habilitarlo en las versiones mas recientes usando el comando `corepack enable`
