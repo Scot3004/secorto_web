@@ -30,7 +30,7 @@ const PortfolioTemplate = ({
 export const Head = ({data: { mdx }}) => (
   <Seo
     title={mdx.frontmatter.title}
-    description={mdx.excerpt}
+    description={`Experiencia en ${mdx.frontmatter.title} ${mdx.frontmatter.role} donde mis tareas son ${mdx.frontmatter.responsibilities}`}
     imageSource={mdx.frontmatter.image.publicURL}
     type="article"
   >
