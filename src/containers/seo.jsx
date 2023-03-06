@@ -6,7 +6,6 @@
  */
 
 import * as React from "react"
-import { useThemeUI } from "theme-ui"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 function Seo({
@@ -17,7 +16,6 @@ function Seo({
   type,
   children
 }) {
-  const { theme } = useThemeUI()
   const siteMetadata = useSiteMetadata()
 
   const metaDescription = description || siteMetadata.description
@@ -48,7 +46,6 @@ function Seo({
         name="viewport"
         content="width=device-width, minimum-scale=1"
       ></meta>
-      <meta name="theme-color" content={theme.rawColors.primary} />
       {children}
     </>
   )

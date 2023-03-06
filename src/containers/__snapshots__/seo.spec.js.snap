@@ -57,10 +57,6 @@ exports[`Seo con titulo render Seo con imagen 1`] = `
     content="width=device-width, minimum-scale=1"
     name="viewport"
   />,
-  <meta
-    content="#fff"
-    name="theme-color"
-  />,
 ]
 `;
 
@@ -122,10 +118,6 @@ exports[`Seo con titulo render Seo modelo blog 1`] = `
     name="viewport"
   />,
   <meta
-    content="#fff"
-    name="theme-color"
-  />,
-  <meta
     content="August 14, 2022"
     property="og:article:published_time"
   />,
@@ -180,10 +172,6 @@ exports[`Seo con titulo render Seo solo titulo 1`] = `
   <meta
     content="width=device-width, minimum-scale=1"
     name="viewport"
-  />,
-  <meta
-    content="#fff"
-    name="theme-color"
   />,
 ]
 `;
