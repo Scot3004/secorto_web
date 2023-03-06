@@ -6,35 +6,24 @@
  */
 
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { useThemeUI } from "theme-ui"
+import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 function Seo({
   description,
   title,
   imageSource,
   imageAlt,
+  type,
   children
 }) {
   const { theme } = useThemeUI()
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
+  const siteMetadata = useSiteMetadata()
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || siteMetadata.description
+  const defaultTitle = siteMetadata?.title
   const image = imageSource
-    ? `${site.siteMetadata.siteUrl}${imageSource}`
+    ? `${siteMetadata.siteUrl}${imageSource}`
     : null
   const imageAltText = imageAlt || metaDescription
   return (
@@ -43,15 +32,18 @@ function Seo({
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content={image} />
+      <meta property="og:type" content={type} />
       <meta property="og:image:alt" content={imageAltText} />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
+      <meta name="twitter:creator" content={siteMetadata?.author || ``} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      <meta property="twitter:image" content={image} />
       <meta property="twitter:image:alt" content={imageAltText} />
+      {image && <>
+          <meta property="og:image" content={image} />
+          <meta property="twitter:image" content={image} />
+        </>
+      }
       <meta
         name="viewport"
         content="width=device-width, minimum-scale=1"
@@ -60,6 +52,10 @@ function Seo({
       {children}
     </>
   )
+}
+
+Seo.defaultProps = {
+  type: "website"
 }
 
 export default Seo

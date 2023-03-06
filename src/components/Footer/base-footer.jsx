@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Container } from "theme-ui"
 
 const BaseFooter = ({ children }) => (
   <footer
@@ -13,7 +13,9 @@ const BaseFooter = ({ children }) => (
       px: 3
     }}
   >
-    {children}
+    <Container>
+      {children}
+    </Container>
   </footer>
 )
 export default BaseFooter

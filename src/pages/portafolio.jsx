@@ -9,15 +9,21 @@ import PortfolioList from "../components/Portfolio/portfolio-list"
 
 const PortfolioPosts = ({ data, location }) => (
   <Layout location={location} header={<Header>Portafolio</Header>} footer={ <FooterContainer />}>
-    <Seo title="Portafolio" />
     <PortfolioList posts={data.allMdx.edges} />
   </Layout>
 )
 
-export const Head = () => <Seo title="Portafolio" />
+export const Head = ({data: { capturaPortafolio }}) => (
+  <Seo
+    title="Portafolio"
+    description="Portafolio de experiencias de Sergio Carlos Orozco Torres"
+    imageSource={capturaPortafolio.publicURL}
+    imageAlt="Captura de pantalla del portafolio"
+  />
+)
 
 export const query = graphql`
-  {
+  query ListadoPortafolio {
     allMdx(
       filter: { fields: { contentType: { eq: "portafolio" } } }
       sort: { frontmatter: { title: ASC } }
@@ -39,13 +45,8 @@ export const query = graphql`
         }
       }
     }
-    site {
-      siteMetadata {
-        social {
-          name
-          url
-        }
-      }
+    capturaPortafolio: file(absolutePath: { regex: "/capturas/captura_homepage.jpg/" }) {
+      publicURL
     }
   }
 `

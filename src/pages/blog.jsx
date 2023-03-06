@@ -9,15 +9,21 @@ import PostList from "../components/Blog/blog-list"
 
 const BlogPosts = ({ data, location }) => (
   <Layout location={location} header={<Header>Blog</Header>} footer={<FooterContainer />}>
-    <Seo title="Blog" />
     <PostList posts={data.allMdx.edges} />
   </Layout>
 )
 
-export const Head = () => <Seo title="Blog" />
+export const Head = ({data: { capturaBlog }}) => (
+  <Seo
+    title="Blog"
+    description="Blog de experiencias de Sergio Carlos Orozco Torres"
+    imageSource={capturaBlog.publicURL}
+    imageAlt="Captura de pantalla del blog"
+  />
+)
 
 export const query = graphql`
-  {
+query ListadoBlog {
     allMdx(
       filter: { fields: { contentType: { eq: "blog" } } }
       sort: { frontmatter: { date: DESC } }
@@ -35,13 +41,8 @@ export const query = graphql`
         }
       }
     }
-    site {
-      siteMetadata {
-        social {
-          name
-          url
-        }
-      }
+    capturaBlog: file(absolutePath: { regex: "/capturas/captura_homepage.jpg/" }) {
+      publicURL
     }
   }
 `

@@ -27,7 +27,16 @@ const PortfolioTemplate = ({
   )
 }
 
-export const Head = () => <Seo title="Portafolio" />
+export const Head = ({data: { mdx }}) => (
+  <Seo
+    title={mdx.frontmatter.title}
+    description={`Experiencia en ${mdx.frontmatter.title} ${mdx.frontmatter.role} donde mis tareas son ${mdx.frontmatter.responsibilities}`}
+    imageSource={mdx.frontmatter.image.publicURL}
+    type="article"
+  >
+  </Seo>
+)
+
 
 export const pageQuery = graphql`
   query PortafolioPostQuery($id: String, $previous: String, $next: String) {
@@ -39,6 +48,7 @@ export const pageQuery = graphql`
         role
         responsibilities
         image {
+          publicURL
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }
