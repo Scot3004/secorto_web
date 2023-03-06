@@ -14,6 +14,7 @@ function Seo({
   title,
   imageSource,
   imageAlt,
+  type,
   children
 }) {
   const { theme } = useThemeUI()
@@ -31,15 +32,18 @@ function Seo({
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content={image} />
+      <meta property="og:type" content={type} />
       <meta property="og:image:alt" content={imageAltText} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={siteMetadata?.author || ``} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      <meta property="twitter:image" content={image} />
       <meta property="twitter:image:alt" content={imageAltText} />
+      {image && <>
+          <meta property="og:image" content={image} />
+          <meta property="twitter:image" content={image} />
+        </>
+      }
       <meta
         name="viewport"
         content="width=device-width, minimum-scale=1"
@@ -48,6 +52,10 @@ function Seo({
       {children}
     </>
   )
+}
+
+Seo.defaultProps = {
+  type: "website"
 }
 
 export default Seo

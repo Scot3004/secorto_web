@@ -24,13 +24,23 @@ const BlogTemplate = ({
   </Layout>
 )
 
-export const Head = () => <Seo title="Blog" />
+export const Head = ({data: { mdx }}) => (
+  <Seo
+    title={mdx.frontmatter.title}
+    description={mdx.excerpt}
+    imageSource={mdx.image}
+    type="article"
+>
+  <meta property="og:article:published_time" content={mdx.frontmatter.date}></meta>
+</Seo>
+)
 
 export const pageQuery = graphql`
   query BlogPostQuery($id: String, $previous: String, $next: String) {
     mdx(id: { eq: $id }) {
       id
       body
+      excerpt
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
