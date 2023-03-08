@@ -51,10 +51,17 @@ module.exports = {
         // Enables "Add to HomeScreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: "standalone",
-        icon: "content/img/maskable_icon.png",
+        icon: "content/img/logo.png",
         icon_options: {
-          purpose: `any maskable`,
+          purpose: `any`,
         },
+        icons: [
+          {
+            src: "content/img/maskable_icon.png",
+            type: `image/png`,
+            purpose: "maskable"
+          },
+        ],
         crossOrigin: `use-credentials`,
         theme_color_in_head: true,
         shortcuts: [
