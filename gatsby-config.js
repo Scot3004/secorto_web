@@ -55,12 +55,6 @@ module.exports = {
         },
         icons: [
           {
-            src: "content/img/icon/maskable_icon.png",
-            type: `image/png`,
-            sizes: `344x344`,
-            purpose: "maskable"
-          },
-          {
             src: "content/img/icon/maskable_icon_x48.png",
             type: `image/png`,
             sizes: `48x48`,
@@ -88,6 +82,18 @@ module.exports = {
             src: "content/img/icon/maskable_icon_x192.png",
             type: `image/png`,
             sizes: `192x192`,
+            purpose: "maskable"
+          },
+          {
+            src: "content/img/icon/maskable_icon_x384.png",
+            type: `image/png`,
+            sizes: `384x384`,
+            purpose: "maskable"
+          },
+          {
+            src: "content/img/icon/maskable_icon_x512.png",
+            type: `image/png`,
+            sizes: `512x512`,
             purpose: "maskable"
           },
         ],
