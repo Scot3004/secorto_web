@@ -45,95 +45,92 @@ module.exports = {
       options: {
         name: "SeCOrTo",
         short_name: "SeCOrTo",
+        description: `Sitio web de Sergio Orozco especialista en seguridad informática SDET perficient`,
         start_url: "/",
         background_color: "#004f53",
         theme_color: "#004f53",
         display: "standalone",
-        icon: "content/img/logo.png",
-        icon_options: {
-          purpose: `any`,
-        },
         icons: [
           {
-            src: "content/img/icon/maskable_icon_x48.png",
+            src: "/icon/maskable_icon_x48.png",
             type: `image/png`,
             sizes: `48x48`,
             purpose: "maskable"
           },
           {
-            src: "content/img/icon/maskable_icon_x72.png",
+            src: "/icon/maskable_icon_x72.png",
             type: `image/png`,
             sizes: `72x72`,
             purpose: "maskable"
           },
           {
-            src: "content/img/icon/maskable_icon_x96.png",
+            src: "/icon/maskable_icon_x96.png",
             type: `image/png`,
             sizes: `96x96`,
             purpose: "maskable"
           },
           {
-            src: "content/img/icon/maskable_icon_x128.png",
+            src: "/icon/maskable_icon_x128.png",
             type: `image/png`,
             sizes: `128x128`,
             purpose: "maskable"
           },
           {
-            src: "content/img/icon/maskable_icon_x192.png",
+            src: "/icon/maskable_icon_x192.png",
             type: `image/png`,
             sizes: `192x192`,
             purpose: "maskable"
           },
           {
-            src: "content/img/icon/maskable_icon_x384.png",
+            src: "/icon/maskable_icon_x384.png",
             type: `image/png`,
             sizes: `384x384`,
             purpose: "maskable"
           },
           {
-            src: "content/img/icon/maskable_icon_x512.png",
+            src: "/icon/maskable_icon_x512.png",
             type: `image/png`,
             sizes: `512x512`,
             purpose: "maskable"
           },
           {
-            src: "content/img/icon/logo_48.png",
+            src: "/icon/logo_48.png",
             type: `image/png`,
             sizes: `48x48`,
             purpose: "any"
           },
           {
-            src: "content/img/icon/logo_72.png",
+            src: "/icon/logo_72.png",
             type: `image/png`,
             sizes: `72x72`,
             purpose: "any"
           },
           {
-            src: "content/img/icon/logo_96.png",
+            src: "/icon/logo_96.png",
             type: `image/png`,
             sizes: `96x96`,
             purpose: "any"
           },
           {
-            src: "content/img/icon/logo_128.png",
+            src: "/icon/logo_128.png",
             type: `image/png`,
             sizes: `128x128`,
             purpose: "any"
           },
           {
-            src: "content/img/icon/logo_192.png",
+            src: "/icon/logo_192.png",
             type: `image/png`,
             sizes: `192x192`,
             purpose: "any"
           },
           {
-            src: "content/img/icon/logo_384.png",
+            src: "/icon/logo_384.png",
             type: `image/png`,
             sizes: `384x384`,
             purpose: "any"
           },
           {
-            src: "content/img/icon/logo_512.png",
+            src: "/icon/logo_512.png",
             type: `image/png`,
             sizes: `512x512`,
             purpose: "any"
@@ -146,11 +143,23 @@ module.exports = {
             name: "Blog",
             url: "/blog",
             description: "Entradas del blog",
+            icons: [
+              {
+                src: "/icon/twotone_message_white_48dp.png",
+                sizes: "96x96"
+              }
+            ],
           },
           {
             name: "Portafolio",
             url: "/portafolio",
             description: "Portafolio de experiencias",
+            icons: [
+              {
+                src: "/icon/twotone_work_white_48dp.png",
+                sizes: "96x96"
+              }
+            ],
           },
         ],
       },
