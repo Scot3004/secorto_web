@@ -96,6 +96,48 @@ module.exports = {
             sizes: `512x512`,
             purpose: "maskable"
           },
+          {
+            src: "content/img/icon/logo_48.png",
+            type: `image/png`,
+            sizes: `48x48`,
+            purpose: "any"
+          },
+          {
+            src: "content/img/icon/logo_72.png",
+            type: `image/png`,
+            sizes: `72x72`,
+            purpose: "any"
+          },
+          {
+            src: "content/img/icon/logo_96.png",
+            type: `image/png`,
+            sizes: `96x96`,
+            purpose: "any"
+          },
+          {
+            src: "content/img/icon/logo_128.png",
+            type: `image/png`,
+            sizes: `128x128`,
+            purpose: "any"
+          },
+          {
+            src: "content/img/icon/logo_192.png",
+            type: `image/png`,
+            sizes: `192x192`,
+            purpose: "any"
+          },
+          {
+            src: "content/img/icon/logo_384.png",
+            type: `image/png`,
+            sizes: `384x384`,
+            purpose: "any"
+          },
+          {
+            src: "content/img/icon/logo_512.png",
+            type: `image/png`,
+            sizes: `512x512`,
+            purpose: "any"
+          },
         ],
         crossOrigin: `use-credentials`,
         theme_color_in_head: true,
