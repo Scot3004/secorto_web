@@ -48,13 +48,49 @@ module.exports = {
         start_url: "/",
         background_color: "#004f53",
         theme_color: "#004f53",
-        // Enables "Add to HomeScreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: "standalone",
-        icon: "content/img/maskable_icon.png",
+        icon: "content/img/logo.png",
         icon_options: {
-          purpose: `any maskable`,
+          purpose: `any`,
         },
+        icons: [
+          {
+            src: "content/img/icon/maskable_icon.png",
+            type: `image/png`,
+            sizes: `344x344`,
+            purpose: "maskable"
+          },
+          {
+            src: "content/img/icon/maskable_icon_x48.png",
+            type: `image/png`,
+            sizes: `48x48`,
+            purpose: "maskable"
+          },
+          {
+            src: "content/img/icon/maskable_icon_x72.png",
+            type: `image/png`,
+            sizes: `72x72`,
+            purpose: "maskable"
+          },
+          {
+            src: "content/img/icon/maskable_icon_x96.png",
+            type: `image/png`,
+            sizes: `96x96`,
+            purpose: "maskable"
+          },
+          {
+            src: "content/img/icon/maskable_icon_x128.png",
+            type: `image/png`,
+            sizes: `128x128`,
+            purpose: "maskable"
+          },
+          {
+            src: "content/img/icon/maskable_icon_x192.png",
+            type: `image/png`,
+            sizes: `192x192`,
+            purpose: "maskable"
+          },
+        ],
         crossOrigin: `use-credentials`,
         theme_color_in_head: true,
         shortcuts: [
