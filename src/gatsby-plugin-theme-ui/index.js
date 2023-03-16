@@ -2,7 +2,6 @@ import merge from "deepmerge"
 import typography from "./typography"
 import colors from "./colors"
 import styles from "./styles"
-import prism from "./prism"
 
 const customStyles = merge(typography, {
   config: {
@@ -16,7 +15,6 @@ const customStyles = merge(typography, {
     sidebarBreakpoint: 830,
   },
   styles,
-  prism,
   navlink: {
     fontSize: 28,
     fontFamily: "heading",
