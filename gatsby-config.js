@@ -50,6 +50,7 @@ module.exports = {
         background_color: "#004f53",
         theme_color: "#004f53",
         display: "standalone",
+        icon: "content/img/logo.png",
         icons: [
           {
             src: "/icon/maskable_icon_x48.png",
