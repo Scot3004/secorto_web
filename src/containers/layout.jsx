@@ -16,26 +16,26 @@ const Layout = ({ children, header, footer }) => {
     <SidebarContext.Consumer>
       {sidebarOptions => (
         <ThemeProvider theme={theme}>
-          <VisuallyHidden>
-            <a href={`#${MAIN_CONTENT_ID}`}>Saltar al contenido</a>
-          </VisuallyHidden>
-          <BurgerButton
-            open={sidebarOptions.open}
-            setOpen={sidebarOptions.toggleOpen}
-          />
-          <Sidebar
-            open={sidebarOptions.open}
-            setOpen={sidebarOptions.closeOnMobile}
-          />
-          <Main
-            sidebarOpen={sidebarOptions.open}
-            header={header}
-            footer={footer}
-          >
-            <MDXProvider components={components}>
+          <MDXProvider components={components}>
+            <VisuallyHidden>
+              <a href={`#${MAIN_CONTENT_ID}`}>Saltar al contenido</a>
+            </VisuallyHidden>
+            <BurgerButton
+              open={sidebarOptions.open}
+              setOpen={sidebarOptions.toggleOpen}
+            />
+            <Sidebar
+              open={sidebarOptions.open}
+              setOpen={sidebarOptions.closeOnMobile}
+            />
+            <Main
+              sidebarOpen={sidebarOptions.open}
+              header={header}
+              footer={footer}
+            >
               {children}
-            </MDXProvider>
-          </Main>
+            </Main>
+          </MDXProvider>
         </ThemeProvider>
       )}
     </SidebarContext.Consumer>
