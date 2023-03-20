@@ -1,5 +1,7 @@
 name: Jest
 on: push
+env:
+  NODE_ENV: test
 jobs:
   test:
     runs-on: ubuntu-latest
