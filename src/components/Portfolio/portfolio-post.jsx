@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
 import PostHero from "../Post/post-hero"
 import PostTitle from "../Post/post-title"
 

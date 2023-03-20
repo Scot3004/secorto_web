@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, Switch, Label, useColorMode } from "theme-ui"
+/** @jsxImportSource theme-ui */
+import { Switch, Label, useColorMode } from "theme-ui"
 
 import { LightMode, DarkMode } from "@emotion-icons/material-twotone"
 
@@ -10,9 +10,6 @@ const ColorModeSwitch = ({ afterToggle, ...props }) => {
     setColorMode(isDark ? `light` : `dark`)
     setTimeout(function () {
       afterToggle()
-      // TODO: Eliminar, workaround debido a que el cambio de color no se está aplicando correctamente
-      // eslint-disable-next-line no-restricted-globals
-      location.reload(true);
     }, 400)
   }
 

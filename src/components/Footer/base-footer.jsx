@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, Container } from "theme-ui"
+/** @jsxImportSource theme-ui */
+import { Container } from "theme-ui"
 
 const BaseFooter = ({ children }) => (
   <footer
@@ -10,7 +10,10 @@ const BaseFooter = ({ children }) => (
       bottom: 0,
       width: "100%",
       height: "6rem",
-      px: 3
+      px: 3,
+      "@media print": {
+        display: "none"
+      }
     }}
   >
     <Container>

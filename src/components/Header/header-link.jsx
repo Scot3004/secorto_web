@@ -1,6 +1,5 @@
-/** @jsx jsx */
+/** @jsxImportSource theme-ui */
 import { Link } from "gatsby"
-import { jsx } from "theme-ui"
 import Header from "./header"
 
 const HeaderLink = ({ children, ...props }) => (

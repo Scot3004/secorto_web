@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
 import { Link } from "gatsby"
 
 import Logo from "../../assets/logo.inline.svg"

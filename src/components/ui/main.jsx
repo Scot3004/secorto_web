@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { Container, jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
+import { Container } from "theme-ui"
 import { MAIN_CONTENT_ID } from "../../constants"
 
 const Main = ({ children, sidebarOpen, header, footer }) => (

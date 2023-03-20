@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
 
 const Menu = ({ children, open }) => (
   <nav
@@ -38,6 +37,9 @@ const Menu = ({ children, open }) => (
           justifyContent: "flex-start",
         },
       },
+      "@media print": {
+        display: "none"
+      }
     }}
   >
     {children}

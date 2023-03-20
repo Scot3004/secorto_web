@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
 import { useId } from "react";
 const ResponsiveIFrame = ({children, title, ...props}) => {
   const iframeId = useId()

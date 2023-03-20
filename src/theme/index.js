@@ -7,6 +7,7 @@ const customStyles = merge(typography, {
   config: {
     initialColorModeName: "light",
     useColorSchemeMediaQuery: true,
+    printColorModeName: 'light',
   },
   colors,
   sizes: {
