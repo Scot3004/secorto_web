@@ -5,12 +5,17 @@ import SidebarContext from "../context/SidebarContext"
 import Main from "../components/ui/main"
 import VisuallyHidden from "../components/ui/visually-hidden"
 import { MAIN_CONTENT_ID } from "../constants"
+import { ThemeProvider } from "theme-ui"
+import { useThemedStylesWithMdx } from '@theme-ui/mdx'
+import { MDXProvider, useMDXComponents } from '@mdx-js/react'
+import theme from "../theme"
 
 const Layout = ({ children, header, footer }) => {
+  const components = useThemedStylesWithMdx(useMDXComponents())
   return (
     <SidebarContext.Consumer>
       {sidebarOptions => (
-        <div>
+        <ThemeProvider theme={theme}>
           <VisuallyHidden>
             <a href={`#${MAIN_CONTENT_ID}`}>Saltar al contenido</a>
           </VisuallyHidden>
@@ -27,9 +32,11 @@ const Layout = ({ children, header, footer }) => {
             header={header}
             footer={footer}
           >
-            {children}
+            <MDXProvider components={components}>
+              {children}
+            </MDXProvider>
           </Main>
-        </div>
+        </ThemeProvider>
       )}
     </SidebarContext.Consumer>
   )

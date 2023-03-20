@@ -7417,11 +7417,6 @@ gatsby-plugin-sitemap@^6.6.0:
     minimatch "^3.1.2"
     sitemap "^7.1.1"
 
-gatsby-plugin-theme-ui@^0.15.5:
-  version "0.15.5"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.15.5.tgz#be35aefe6a23da4bd17d837f55d79197c3ae6b49"
-  integrity sha512-5aCEv3OyT0w5UCrEkoWw8yjWHsw3jDZRTd181WXDBJX0HdLSxHwD4lNMsSW+taVF55112LBATjTUq1yRdo9FsQ==
-
 gatsby-plugin-typescript@^5.7.0:
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-5.7.0.tgz#9b5b6ecdb518ed81bc12a187d464dde1c52e6b5e"

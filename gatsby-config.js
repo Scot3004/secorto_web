@@ -165,9 +165,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: "gatsby-plugin-theme-ui",
-    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

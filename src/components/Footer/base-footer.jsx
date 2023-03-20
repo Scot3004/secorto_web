@@ -10,7 +10,10 @@ const BaseFooter = ({ children }) => (
       bottom: 0,
       width: "100%",
       height: "6rem",
-      px: 3
+      px: 3,
+      "@media print": {
+        display: "none"
+      }
     }}
   >
     <Container>

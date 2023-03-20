@@ -37,6 +37,9 @@ const Menu = ({ children, open }) => (
           justifyContent: "flex-start",
         },
       },
+      "@media print": {
+        display: "none"
+      }
     }}
   >
     {children}
