@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import PhotoSwipeAdapter from './PhotoSwipeAdapter';
 

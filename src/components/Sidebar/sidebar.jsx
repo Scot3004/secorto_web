@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
-
+/** @jsxImportSource theme-ui */
 import { Link } from "gatsby"
 import { Work, Message } from "@emotion-icons/material-twotone"
 

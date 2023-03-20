@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
 import { CalendarToday } from "@emotion-icons/material-twotone"
 
 const PostDate = ({ children, ...props }) => (

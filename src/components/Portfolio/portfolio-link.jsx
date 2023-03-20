@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, Card, Text } from "theme-ui"
+/** @jsxImportSource theme-ui */
+import { Card, Text } from "theme-ui"
 import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 

@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
+
 const ContentWrapper = ({children}) =>
 <div sx={{p: "1rem"}}>
   {children}

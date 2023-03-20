@@ -1,7 +1,5 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
 import { Themed } from "@theme-ui/mdx"
-
 import { Fragment } from "react"
 
 const SocialLinks = ({ socialLinks, title }) => (

@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
-
+/** @jsxImportSource theme-ui */
 import HomePageLink from "./homepage-link"
 
 const Brand = ({ title }) => (

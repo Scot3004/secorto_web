@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, Container } from "theme-ui"
+/** @jsxImportSource theme-ui */
+import { Container } from "theme-ui"
 
 const BaseFooter = ({ children }) => (
   <footer

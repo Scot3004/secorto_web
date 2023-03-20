@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
 import { Link } from "gatsby"
 import { Flex, Link as ThemedLink } from "theme-ui"
 import { ArrowBack, ArrowForward } from "@emotion-icons/material-twotone"

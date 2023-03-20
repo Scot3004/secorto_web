@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
 import { Flex, Box, Link } from "theme-ui"
 import AvatarImg from "../../assets/avatar.jpg"
 
