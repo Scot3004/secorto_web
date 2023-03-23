@@ -11976,7 +11976,7 @@ react-test-renderer@^18.2.0:
     react-shallow-renderer "^16.15.0"
     scheduler "^0.23.0"
 
-react-vertical-timeline-component@^3.5.2:
+react-vertical-timeline-component@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/react-vertical-timeline-component/-/react-vertical-timeline-component-3.6.0.tgz#aeb4b56be3f397b493c847df79521f3bfb3aab71"
   integrity sha512-l9zulqjIGlRuaQeplGzV4r/tG2RYBpYt84Il8w4IxnJze2cDIGI04MKo3F7f1sHT0Sih1ohEFts8UV23AJS15Q==

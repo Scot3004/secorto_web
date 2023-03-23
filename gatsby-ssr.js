@@ -4,12 +4,19 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
  */
 import React from 'react';
+import { jsx, InitializeColorMode } from 'theme-ui'
 import CustomLayout from "./wrapRootElement"
 
 export const wrapRootElement = CustomLayout
 const webfontURL = "/fonts/fonts.css"
 
-export const onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
+export const onRenderBody = ({ setHtmlAttributes, setHeadComponents, setPreBodyComponents },
+  { injectColorFlashScript = true }) => {
+    if (injectColorFlashScript) {
+      setPreBodyComponents([
+        jsx(InitializeColorMode, { key: 'theme-ui-no-flash' }),
+      ])
+    }
   setHtmlAttributes({ lang: `es` })
   setHeadComponents([
     <link

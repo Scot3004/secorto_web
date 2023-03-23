@@ -45,7 +45,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0",
-    "react-vertical-timeline-component": "^3.5.2",
+    "react-vertical-timeline-component": "^3.6.0",
     "theme-ui": "^0.15.5",
     "typescript": "^4.9.5",
     "webpack": "^5.75.0"
