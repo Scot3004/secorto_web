@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 import BaseFooter from "../components/Footer/base-footer"
 import SocialLinks from "../components/Footer/social-links"

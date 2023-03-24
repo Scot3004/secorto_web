@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import renderer from "react-test-renderer"
 import Seo from "./seo"
 import * as Gatsby from "gatsby"
