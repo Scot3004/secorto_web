@@ -8,6 +8,15 @@
 import * as React from "react"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 
+interface SeoProps {
+  description: string
+  title: string
+  imageSource: any
+  imageAlt?: string
+  type: string
+  children?: any
+}
+
 function Seo({
   description,
   title,
@@ -15,7 +24,7 @@ function Seo({
   imageAlt,
   type,
   children
-}) {
+}: SeoProps) {
   const siteMetadata = useSiteMetadata()
 
   const metaDescription = description || siteMetadata.description

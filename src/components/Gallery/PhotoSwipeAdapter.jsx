@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import 'photoswipe/style.css';
-import { Global } from '@emotion/react';
+import React, { useEffect } from 'react'
+import PhotoSwipeLightbox from 'photoswipe/lightbox'
+import 'photoswipe/style.css'
+import { Global } from '@emotion/react'
 
 const PhotoSwipeAdapter = ({ children, galleryId, childElement, lightboxOptions }) => {
   useEffect(() => {

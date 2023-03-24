@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../containers/layout"
@@ -8,7 +8,7 @@ import Header from "../components/Header/header"
 import PostList from "../components/Blog/blog-list"
 
 const BlogPosts = ({ data, location }) => (
-  <Layout location={location} header={<Header>Blog</Header>} footer={<FooterContainer />}>
+  <Layout header={<Header>Blog</Header>} footer={<FooterContainer />}>
     <PostList posts={data.allMdx.edges} />
   </Layout>
 )

@@ -11,8 +11,8 @@
  const path = require("path")
 
  const contentTemplate = {
-  blog: path.resolve(`./src/templates/blog-template.jsx`),
-  portafolio: path.resolve(`./src/templates/portafolio-template.jsx`),
+  blog: path.resolve(`./src/templates/blog-template.tsx`),
+  portafolio: path.resolve(`./src/templates/portafolio-template.tsx`),
 }
 
  exports.onCreateNode = ({ node, getNode, actions }) => {

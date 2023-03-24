@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Seo con titulo render Seo modelo blog 1`] = `
+[
+  <title>
+    Blog post | Site metadata title
+  </title>,
+  <meta
+    content="description stub"
+    name="description"
+  />,
+  <meta
+    content="Blog post"
+    property="og:title"
+  />,
+  <meta
+    content="description stub"
+    property="og:description"
+  />,
+  <meta
+    content="website"
+    property="og:type"
+  />,
+  <meta
+    content="Stub para el alt de imagen"
+    property="og:image:alt"
+  />,
+  <meta
+    content="summary"
+    name="twitter:card"
+  />,
+  <meta
+    content=""
+    name="twitter:creator"
+  />,
+  <meta
+    content="Blog post"
+    name="twitter:title"
+  />,
+  <meta
+    content="description stub"
+    name="twitter:description"
+  />,
+  <meta
+    content="Stub para el alt de imagen"
+    property="twitter:image:alt"
+  />,
+  <meta
+    content="https://example.site.metadata/imageSourceStub"
+    property="og:image"
+  />,
+  <meta
+    content="https://example.site.metadata/imageSourceStub"
+    property="twitter:image"
+  />,
+  <meta
+    content="width=device-width, minimum-scale=1"
+    name="viewport"
+  />,
+  <meta
+    content="August 14, 2022"
+    property="og:article:published_time"
+  />,
+]
+`;

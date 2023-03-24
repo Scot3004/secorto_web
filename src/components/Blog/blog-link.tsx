@@ -4,7 +4,7 @@ import { Themed } from "@theme-ui/mdx"
 import { Link } from "gatsby"
 import PostDate from "../Post/post-date"
 
-const PostLink = ({ title, slug, date, excerpt, image }) => (
+const PostLink = ({ title, slug, date, excerpt }) => (
   <Card
     as={Link}
     to={slug}

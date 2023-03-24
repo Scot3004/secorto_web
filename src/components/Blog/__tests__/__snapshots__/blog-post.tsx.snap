@@ -26,6 +26,7 @@ exports[`BlogPost renders correctly 1`] = `
   className="emotion-0"
 >
   <img
+    alt="Hero image for post"
     src="testImage"
   />
   <h1

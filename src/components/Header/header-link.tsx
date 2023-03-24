@@ -2,9 +2,10 @@
 import { Link } from "gatsby"
 import Header from "./header"
 
-const HeaderLink = ({ children, ...props }) => (
+const HeaderLink = ({ children, to, ...props }) => (
   <Header>
     <Link
+      to={to}
       {...props}
       sx={{
         color: "primary",
