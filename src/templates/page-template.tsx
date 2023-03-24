@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import Layout from "../containers/layout"
 import Header from "../components/Header/header"
 import ContentWrapper from "../components/ui/content-wrapper"

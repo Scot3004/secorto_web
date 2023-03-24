@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { graphql } from "gatsby"
 import PortfolioPost from "../components/Portfolio/portfolio-post"
 import Seo from "../containers/seo"

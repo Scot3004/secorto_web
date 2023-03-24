@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@theme-ui/theme-provider"
-import React from "react"
+import * as React from "react"
 import renderer from "react-test-renderer"
 import Header from "../header"
 
@@ -14,7 +14,7 @@ describe("Header", () => {
     const tree = renderer
       .create(
         <ThemeProvider theme={theme}>
-          <Header />
+          <Header>header content</Header>
         </ThemeProvider>
       )
       .toJSON()

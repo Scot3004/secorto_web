@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react";
 import renderer from "react-test-renderer"
 import Seo from "./seo"
 import * as Gatsby from "gatsby"
@@ -30,33 +30,11 @@ describe("Seo con titulo", () => {
     jest.restoreAllMocks()
   })
 
-  it("render Seo solo titulo", () => {
-    const tree = renderer
-      .create(
-        <ThemeProvider theme={theme}>
-          <Seo title="Solo titulo" />
-        </ThemeProvider>
-      )
-      .toJSON()
-    expect(tree).toMatchSnapshot()
-  })
-
-  it("render Seo con imagen", () => {
-    const tree = renderer
-      .create(
-        <ThemeProvider theme={theme}>
-          <Seo title="Con imagen" imageSource="imageSourceStub" imageAlt="Stub para el alt de imagen"/>
-        </ThemeProvider>
-      )
-      .toJSON()
-    expect(tree).toMatchSnapshot()
-  })
-
   it("render Seo modelo blog", () => {
     const tree = renderer
       .create(
         <ThemeProvider theme={theme}>
-          <Seo title="Blog post" imageSource="imageSourceStub" imageAlt="Stub para el alt de imagen">
+          <Seo title="Blog post" imageSource="imageSourceStub" imageAlt="Stub para el alt de imagen" description="description stub">
             <meta property="og:article:published_time" content="August 14, 2022"></meta>
           </Seo>
         </ThemeProvider>

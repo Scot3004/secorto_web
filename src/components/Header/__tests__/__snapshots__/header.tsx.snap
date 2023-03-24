@@ -80,7 +80,9 @@ exports[`Header renders correctly 1`] = `
     </div>
     <span
       className="emotion-4"
-    />
+    >
+      header content
+    </span>
   </div>
   <div
     className="emotion-1"
