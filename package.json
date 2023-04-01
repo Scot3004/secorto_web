@@ -55,7 +55,7 @@
     "@babel/preset-typescript": "^7.21.0",
     "@testing-library/cypress": "^9.0.0",
     "axe-core": "^4.6.3",
-    "concurrently": "^7.6.0",
+    "concurrently": "^8.0.1",
     "cypress": "^12.7.0",
     "cypress-axe": "^1.4.0",
     "eslint-plugin-cypress": "^2.12.1",
