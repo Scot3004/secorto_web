@@ -1,0 +1,18 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+  },
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "yarn install",
+  "postCreateCommand": "",
+  "postAttachCommand": {
+    "server": "yarn develop"
+  },
+  "portsAttributes": {
+    "8000": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "forwardPorts": [8000]
+}
