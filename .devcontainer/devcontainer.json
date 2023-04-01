@@ -6,7 +6,7 @@
   "updateContentCommand": "yarn install",
   "postCreateCommand": "",
   "postAttachCommand": {
-    "server": "yarn develop"
+    "server": "yarn develop -H 0.0.0.0"
   },
   "portsAttributes": {
     "8000": {
