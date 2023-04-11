@@ -1,16 +1,15 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
   "features": {
   },
   "waitFor": "onCreateCommand",
-  "updateContentCommand": "yarn install",
-  "postCreateCommand": "",
+  "onCreateCommand": "yarn install",
   "postAttachCommand": {
     "server": "yarn develop -H 0.0.0.0"
   },
   "portsAttributes": {
     "8000": {
-      "label": "Application",
+      "label": "Gatsby develop",
       "onAutoForward": "openPreview"
     }
   },
