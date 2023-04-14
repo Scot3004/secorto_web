@@ -3,7 +3,7 @@
   "features": {
   },
   "waitFor": "onCreateCommand",
-  "onCreateCommand": "yarn install",
+  "updateContentCommand": "yarn install",
   "postAttachCommand": {
     "server": "yarn develop -H 0.0.0.0"
   },
