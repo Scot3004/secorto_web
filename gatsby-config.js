@@ -235,6 +235,12 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.secorto.com`,
+      },
+    },
   ],
 }
