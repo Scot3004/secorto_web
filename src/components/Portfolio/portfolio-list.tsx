@@ -11,7 +11,6 @@ const PortfolioList = ({ posts }) => (
       backgroundColor: "blogBg",
       p: '2rem 2rem 0',
       mt: '5px',
-      transition: "background-color 0.3s linear",
     }}
   >
     {posts.map(({ node }) => (

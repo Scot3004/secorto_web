@@ -11,7 +11,6 @@ const PostList = ({ posts }) => (
       backgroundColor: "blogBg",
       p: '1rem',
       mt: "5px",
-      transition: "background-color 0.3s linear",
     }}
   >
     {posts.map(({ node }) => (

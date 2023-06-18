@@ -27,7 +27,6 @@ const PostNavigation = ({ previous, next }) => (
           flexWrap: `wrap`,
           justifyContent: `space-between`,
           listStyle: `none`,
-          transition: "all .3s linear",
           mb: "-36px",
         }}
       >

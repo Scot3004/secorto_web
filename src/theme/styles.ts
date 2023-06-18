@@ -1,7 +1,6 @@
 const customStyles = {
   root: {
-    fontFamily: `body`,
-    transition: "all 0.3s linear",
+    fontFamily: `body`
   },
   pre: {
     variant: `prism`,
@@ -32,7 +31,6 @@ const customStyles = {
   // from typography overrideThemeStyles
   a: {
     color: `primary`,
-    transition: "color 0.3s linear",
     ":hover": {
       color: `hover`,
     },
