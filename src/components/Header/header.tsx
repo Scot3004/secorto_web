@@ -1,7 +1,8 @@
 /** @jsxImportSource theme-ui */
 import HomePageLink from "./homepage-link"
 
-const Header = ({ children }) => {
+const Header = ({ children, isTitle=false }) => {
+  const CustomTag = isTitle ?  `h1`: `span`
   return (
     <header
       sx={{
@@ -22,7 +23,7 @@ const Header = ({ children }) => {
         }}
       >
         <HomePageLink />
-        <span
+        <CustomTag
           sx={{
             ml: 2,
             fontSize: [42],
@@ -30,10 +31,12 @@ const Header = ({ children }) => {
             fontFamily: "title",
             position: "relative",
             top: "5px",
+            margin: "0 1rem",
+            fontWeight: 400
           }}
         >
           {children}
-        </span>
+        </CustomTag>
       </div>
       <div sx={{ mx: "auto" }} />
     </header>

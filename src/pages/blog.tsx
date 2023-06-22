@@ -8,7 +8,7 @@ import Header from "../components/Header/header"
 import PostList from "../components/Blog/blog-list"
 
 const BlogPosts = ({ data, location }) => (
-  <Layout header={<Header>Blog</Header>} footer={<FooterContainer />}>
+  <Layout header={<Header isTitle>Blog</Header>} footer={<FooterContainer />}>
     <PostList posts={data.allMdx.edges} />
   </Layout>
 )
