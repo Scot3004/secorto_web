@@ -7,8 +7,8 @@ import FooterContainer from "../containers/footer-container"
 import Header from "../components/Header/header"
 import PortfolioList from "../components/Portfolio/portfolio-list"
 
-const PortfolioPosts = ({ data, location }) => (
-  <Layout header={<Header>Portafolio</Header>} footer={ <FooterContainer />}>
+const PortfolioPosts = ({ data }) => (
+  <Layout header={<Header isTitle>Portafolio</Header>} footer={ <FooterContainer />}>
     <PortfolioList posts={data.allMdx.edges} />
   </Layout>
 )
