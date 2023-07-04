@@ -6,7 +6,7 @@
   "author": "Sergio Orozco <scot3004@gmail.com>",
   "homepage": "https://www.secorto.com",
   "dependencies": {
-    "@babel/core": "^7.20.12",
+    "@babel/core": "^7.22.6",
     "@babel/plugin-syntax-flow": "^7.18.6",
     "@babel/plugin-transform-react-jsx": "^7.20.13",
     "@emotion-icons/material-twotone": "^3.14.0",
