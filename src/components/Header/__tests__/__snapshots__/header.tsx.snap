@@ -73,10 +73,9 @@ exports[`Header renders correctly 1`] = `
       <a
         href="/"
       >
-        <img
+        <test-file-stub
           alt="logo"
           className="emotion-3"
-          src="test-file-stub"
         />
       </a>
     </div>
