@@ -122,7 +122,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 exports.onCreateWebpackConfig = ({
   stage, actions, getConfig, rules
 }, { rule: ruleProps = {} }) => {
-  const { include, exclude, omitKeys, options = {}, ...otherProps } = ruleProps
+  const { include, exclude } = ruleProps
 
   if([
     'develop',

@@ -1,5 +1,5 @@
 {
-  "extends": ["react-app", "plugin:jsx-a11y/recommended", "plugin:mdx/recommended"],
+  "extends": ["react-app", "plugin:jsx-a11y/recommended"],
   // optional, if you want to lint code blocks at the same time
   "settings": {
     "mdx/code-blocks": true,
