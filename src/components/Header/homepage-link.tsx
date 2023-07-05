@@ -1,12 +1,11 @@
 /** @jsxImportSource theme-ui */
 import { Link } from "gatsby"
-import Logo from "../../assets/logo.svg"
+import Logo from "../../assets/logo.inline.svg"
 
 const HomepageLink = () => (
   <div>
     <Link to="/">
-      <img
-        src={Logo}
+      <Logo
         alt="logo"
         sx={{
           width: [36],
@@ -19,7 +18,7 @@ const HomepageLink = () => (
             boxShadow: theme => `2px 2px 8px ${theme.colors.hover}`,
           },
         }}
-      ></img>
+      />
     </Link>
   </div>
 )
