@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@theme-ui/theme-provider"
+import { ThemeUIProvider } from "@theme-ui/theme-provider"
 import * as React from "react"
 import renderer from "react-test-renderer"
 import Header from "../header"
@@ -13,9 +13,9 @@ describe("Header", () => {
   it("renders correctly", () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <ThemeUIProvider theme={theme}>
           <Header>header content</Header>
-        </ThemeProvider>
+        </ThemeUIProvider>
       )
       .toJSON()
     expect(tree).toMatchSnapshot()

@@ -5,7 +5,7 @@ import SidebarContext from "../context/SidebarContext"
 import Main from "../components/ui/main"
 import VisuallyHidden from "../components/ui/visually-hidden"
 import { MAIN_CONTENT_ID } from "../constants"
-import { InitializeColorMode, ThemeProvider } from "theme-ui"
+import { InitializeColorMode, ThemeUIProvider } from "theme-ui"
 import { useThemedStylesWithMdx } from '@theme-ui/mdx'
 import { MDXProvider, useMDXComponents } from '@mdx-js/react'
 import theme from "../theme"
@@ -15,7 +15,7 @@ const Layout = ({ children, header, footer }) => {
   return (
     <SidebarContext.Consumer>
       {sidebarOptions => (
-        <ThemeProvider theme={theme}>
+        <ThemeUIProvider theme={theme}>
           <InitializeColorMode />
           <MDXProvider components={components}>
             <VisuallyHidden>
@@ -37,7 +37,7 @@ const Layout = ({ children, header, footer }) => {
               {children}
             </Main>
           </MDXProvider>
-        </ThemeProvider>
+        </ThemeUIProvider>
       )}
     </SidebarContext.Consumer>
   )
