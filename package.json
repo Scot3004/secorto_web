@@ -61,6 +61,7 @@
     "cypress-axe": "^1.4.0",
     "eslint-plugin-cypress": "^2.13.3",
     "eslint-plugin-mdx": "^2.1.0",
+    "gatsby-plugin-netlify": "^5.1.0",
     "prettier": "^3.0.0",
     "start-server-and-test": "^2.0.0"
   },

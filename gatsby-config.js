@@ -234,5 +234,6 @@ module.exports = {
         siteUrl: `https://www.secorto.com`,
       },
     },
+    'gatsby-plugin-netlify'
   ],
 }
