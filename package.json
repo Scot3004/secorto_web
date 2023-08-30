@@ -90,5 +90,6 @@
   },
   "bugs": {
     "url": "https://github.com/Scot3004/Scot3004/issues"
-  }
+  },
+  "packageManager": "yarn@3.6.3"
 }
