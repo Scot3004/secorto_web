@@ -1,5 +1,3 @@
-/// <reference types="Cypress" />
-
 describe("Accessibility tests Dark mode", () => {
   beforeEach(() => {
       cy.visit("/", {
